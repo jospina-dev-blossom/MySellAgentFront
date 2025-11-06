@@ -8,7 +8,7 @@ import type { PropertyFilters, Property } from "@core/domain/entities/Property";
  */
 export const useInfiniteProperties = (initialFilters?: PropertyFilters) => {
   const [filters, setFilters] = useState<PropertyFilters>(
-    initialFilters || { pageNumber: 1, pageSize: 10 }
+    initialFilters || { pageNumber: 1, pageSize: 15 }
   );
   const [allProperties, setAllProperties] = useState<Property[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
