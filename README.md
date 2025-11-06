@@ -1,4 +1,4 @@
-# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Front - Real Estate Application# React + TypeScript + Vite
+# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Front - Real Estate Application# React + TypeScript + Vite
 
 
 
@@ -30,7 +30,7 @@ Aplicación web para la gestión y visualización de propiedades inmobiliarias d
 
 # Clonar el repositorio
 
-git clone <repository-url>- Node.js 20.19+ o 22.12+## 🚀 Inicio RápidoAplicación frontend para gestión de propiedades inmobiliarias construida con React, TypeScript y Vite siguiendo arquitectura hexagonal.This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+git clone <repository-url>- **Node.js 20.19+** (recomendado v22.12+)## 🚀 Inicio RápidoAplicación web para la gestión y visualización de propiedades inmobiliarias de lujo. Construida con React 19, TypeScript y Vite, implementando arquitectura hexagonal para garantizar escalabilidad y mantenibilidad.
 
 cd million-front
 
@@ -62,7 +62,7 @@ La aplicación estará disponible en `http://localhost:5173`
 
 ## 📦 Scripts Disponibles
 
-git clone <repository-url>- Node.js 20.19+ o 22.12+## 🏗️ ArquitecturaCurrently, two official plugins are available:
+git clone <repository-url>- Node.js 20.19+ o 22.12+## 🚀 Inicio RápidoAplicación frontend para gestión de propiedades inmobiliarias construida con React, TypeScript y Vite siguiendo arquitectura hexagonal.This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 ```bash
 
@@ -94,7 +94,7 @@ cp .env.example .env
 
 ### Capas de la Aplicación
 
-### InstalaciónEste proyecto implementa **Arquitectura Hexagonal (Ports & Adapters)** para lograr:- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+### Instalación### Prerequisitos
 
 - **🎯 Core (Dominio)**: Entidades, servicios de negocio y lógica pura sin dependencias externas
 
@@ -110,7 +110,7 @@ cp .env.example .env
 
 
 
-- **Separación de responsabilidades**: Cada capa tiene responsabilidades bien definidas```bash- Separación de responsabilidades- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Separación de responsabilidades**: Cada capa tiene responsabilidades bien definidas```bash
 
 - **Independencia de frameworks**: La lógica de negocio no depende de React o Redux
 
@@ -126,7 +126,7 @@ cp .env.example .env
 
 
 
-### Coregit clone <repository-url>- Código testeable y mantenible
+### Coregit clone <repository-url>- Node.js 20.19+ o 22.12+## 🏗️ ArquitecturaCurrently, two official plugins are available:
 
 
 
@@ -142,7 +142,7 @@ cp .env.example .env
 
 
 
-- **Redux Toolkit 2.10** - Gestión de estado centralizadanpm run preview       # Preview del build de producción- Independencia de frameworks## React Compiler
+- **Redux Toolkit 2.10** - Gestión de estado centralizadanpm run preview       # Preview del build de producción- npm o yarn
 
 - **RTK Query** - Data fetching, caching y sincronización de servidor
 
@@ -158,7 +158,7 @@ npm run test          # Ejecuta tests con Jest# Instalar dependencias
 
 - **CSS Modules** - Estilos encapsulados
 
-npm run test:coverage # Genera reporte de coberturanpm install- Facilidad de cambio de implementaciones
+npm run test:coverage # Genera reporte de coberturanpm install- API Backend corriendo en `https://localhost:44311`
 
 ### Routing
 
@@ -174,7 +174,7 @@ npm run test:coverage # Genera reporte de coberturanpm install- Facilidad de cam
 
 - **Jest 30.2** - Framework de testing
 
-- **Testing Library 16.3** - Testing de componentes React# Configurar variables de entornoThe React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Testing Library 16.3** - Testing de componentes React# Configurar variables de entorno
 
 - **ts-jest 29.4** - Soporte TypeScript para Jest
 
@@ -186,11 +186,11 @@ cp .env.example .env
 
 ### Funcionalidades
 
-### 🎯 Capas de la Aplicación
+### Capas de la Aplicación
 
 - **Listado de Propiedades**: Grid responsivo con infinite scroll
 
-- **Búsqueda Avanzada**: Búsqueda por nombre con validación## 📁 Estructura del Proyecto
+- **Búsqueda Avanzada**: Búsqueda por nombre con validación### InstalaciónEste proyecto implementa **Arquitectura Hexagonal (Ports & Adapters)** para lograr:- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
 
 - **Filtros Dinámicos**: Filtrado por dirección y rango de precios con validación en tiempo real
 
@@ -198,7 +198,7 @@ cp .env.example .env
 
 - **Animaciones Suaves**: Transiciones y hover effects profesionales
 
-- **HTML Semántico**: Estructura accesible con etiquetas HTML5 apropiadas- **🔌 Infrastructure**: RTK Query API, configuración y adaptadores de servicios externos  # Iniciar servidor de desarrollo
+- **HTML Semántico**: Estructura accesible con etiquetas HTML5 apropiadas- **🔌 Infrastructure**: RTK Query API, configuración y adaptadores de servicios externos# Iniciar servidor de desarrollo
 
 - **ARIA Completo**: Atributos de accesibilidad para lectores de pantalla
 
@@ -206,7 +206,7 @@ cp .env.example .env
 
 
 
-### Animaciones- **🔧 Shared**: Utilidades, constantes y recursos compartidos entre capasnpm run dev## Expanding the ESLint configuration
+### Animaciones- **🔧 Shared**: Utilidades, constantes y recursos compartidos entre capasnpm run dev
 
 
 
@@ -222,7 +222,7 @@ Implementadas con Framer Motion:
 
 - Modal de filtros animado
 
-- Efectos de scroll- **Separación de responsabilidades**: Cada capa tiene responsabilidades bien definidas```
+- Efectos de scroll- **Separación de responsabilidades**: Cada capa tiene responsabilidades bien definidas```bash- Separación de responsabilidades- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
 
@@ -238,7 +238,7 @@ Implementadas con Framer Motion:
 
 - Etiquetas semánticas (`<article>`, `<section>`, `<search>`, etc.)
 
-- Estados de foco visibles- **Mantenible**: Código organizado y fácil de entendermillion-front/If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Estados de foco visibles- **Mantenible**: Código organizado y fácil de entender# Clonar el repositorio
 
 
 
@@ -254,45 +254,340 @@ Implementadas con Framer Motion:
 
 # .env
 
-VITE_API_BASE_URL=/api/v1### Core├── src/
+VITE_API_BASE_URL=/api/v1### Coregit clone <repository-url>- Código testeable y mantenible
 
 VITE_API_TIMEOUT=10000
 
-VITE_ENV=development- **React 19.1** - Librería UI con últimas características
+VITE_ENV=development
 
 ```
 
-- **TypeScript 5.9** - Tipado estático para seguridad en desarrollo```bash
+- **React 19.1** - Librería UI con últimas características```bash
 
 ### Path Aliases
 
-- **Vite 7.1** - Build tool ultrarrápido con HMR
+- **TypeScript 5.9** - Tipado estático para seguridad en desarrollo
 
 El proyecto utiliza aliases para imports limpios:
 
-npm run dev           # Inicia servidor de desarrollo con HMR│   ├── core/                        # 🎯 Capa de Dominio (Core Business Logic)```js
+- **Vite 7.1** - Build tool ultrarrápido con HMRnpm run dev           # Inicia servidor de desarrollo con HMRcd million-front
 
 ```typescript
 
-import { Property } from '@core/domain/entities';### Estado y Datos
+import { Property } from '@core/domain/entities';
 
 import { useProperty } from '@presentation/hooks/useProperty';
 
-import { TEXTS } from '@shared/constants/texts';- **Redux Toolkit 2.10** - Gestión de estado centralizadanpm run build         # Compila para producción
+import { TEXTS } from '@shared/constants/texts';### Estado y Datosnpm run build         # Compila para producción
 
 ```
 
-- **RTK Query** - Data fetching, caching y sincronización de servidor
+
 
 **Aliases configurados:**
 
-npm run preview       # Preview del build de producción│   │   ├── domain/export default defineConfig([
+- **Redux Toolkit 2.10** - Gestión de estado centralizadanpm run preview       # Preview del build de producción- Independencia de frameworks## React Compiler
 
 - `@/*` → `src/*`
 
-- `@core/*` → `src/core/*`### UI y Animaciones
+- `@core/*` → `src/core/*`- **RTK Query** - Data fetching, caching y sincronización de servidor
 
 - `@infrastructure/*` → `src/infrastructure/*`
+
+- `@presentation/*` → `src/presentation/*`npm run lint          # Ejecuta ESLint
+
+- `@shared/*` → `src/shared/*`
+
+### UI y Animaciones
+
+### Proxy de Desarrollo
+
+npm run test          # Ejecuta tests con Jest# Instalar dependencias
+
+Vite está configurado para proxy de la API y evitar problemas de CORS:
+
+- **Framer Motion 12.23** - Animaciones fluidas y profesionales
+
+```typescript
+
+// vite.config.ts- **Lucide React 0.552** - Iconos modernos y ligerosnpm run test:watch    # Tests en modo watch
+
+server: {
+
+  proxy: {- **CSS Modules** - Estilos encapsulados
+
+    '/api': {
+
+      target: 'https://localhost:44311',npm run test:coverage # Genera reporte de coberturanpm install- Facilidad de cambio de implementaciones
+
+      changeOrigin: true,
+
+      secure: false### Routing
+
+    }
+
+  }```
+
+}
+
+```- **React Router 7.9** - Navegación client-side
+
+
+
+## 🧪 Testing
+
+
+
+### Ejecutar Tests### Testing
+
+
+
+```bash## 🏗️ Arquitectura
+
+# Todos los tests
+
+npm run test- **Jest 30.2** - Framework de testing
+
+
+
+# Tests en modo watch- **Testing Library 16.3** - Testing de componentes React# Configurar variables de entornoThe React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+npm run test:watch
+
+- **ts-jest 29.4** - Soporte TypeScript para Jest
+
+# Con cobertura
+
+npm run test:coverageEste proyecto implementa **Arquitectura Hexagonal (Ports & Adapters)**, separando la aplicación en tres capas principales:
+
+```
+
+## 🎨 Características Principales
+
+### Cobertura Actual
+
+cp .env.example .env
+
+- **SearchBar**: 9/9 tests ✅
+
+- **FilterModal**: 7 tests escritos### Funcionalidades
+
+- **PropertyCard**: 10 tests escritos
+
+### 🎯 Capas de la Aplicación
+
+**Threshold configurado**: 70% en branches, functions, lines y statements
+
+- **Listado de Propiedades**: Grid responsivo con infinite scroll
+
+## 🌐 Integración con API
+
+- **Búsqueda Avanzada**: Búsqueda por nombre con validación## 📁 Estructura del Proyecto
+
+### Endpoints Consumidos
+
+- **Filtros Dinámicos**: Filtrado por dirección y rango de precios con validación en tiempo real
+
+**Base URL**: `https://localhost:44311/api/v1`
+
+- **Detalle de Propiedad**: Vista completa con galería, información del propietario e historial de transacciones- **🎯 Core (Dominio)**: Entidades, servicios de negocio y lógica pura sin dependencias externas
+
+- `GET /Properties` - Lista paginada de propiedades con filtros
+
+- `GET /Properties/{id}` - Detalle completo de una propiedad- **Animaciones Suaves**: Transiciones y hover effects profesionales
+
+
+
+### Filtros Disponibles- **HTML Semántico**: Estructura accesible con etiquetas HTML5 apropiadas- **🔌 Infrastructure**: RTK Query API, configuración y adaptadores de servicios externos  # Iniciar servidor de desarrollo
+
+
+
+```typescript- **ARIA Completo**: Atributos de accesibilidad para lectores de pantalla
+
+{
+
+  name?: string;          // Búsqueda por nombre- **Responsive Design**: Adaptable a móviles, tablets y desktop- **🎨 Presentation**: Componentes React, páginas, hooks, store Redux y rutas
+
+  address?: string;       // Filtro por dirección
+
+  minPrice?: string;      // Precio mínimo
+
+  maxPrice?: string;      // Precio máximo
+
+  pageNumber?: number;    // Número de página### Animaciones- **🔧 Shared**: Utilidades, constantes y recursos compartidos entre capasnpm run dev## Expanding the ESLint configuration
+
+  pageSize?: number;      // Tamaño de página
+
+}
+
+```
+
+Implementadas con Framer Motion:
+
+### RTK Query - Caché y Optimización
+
+
+
+RTK Query maneja automáticamente:
+
+- Entrada progresiva de cards (stagger effect)### Principios de Diseño```
+
+- ✅ Caché de peticiones con invalidación inteligente
+
+- ✅ Deduplicación de requests simultáneos- Hover effects sutiles en imágenes
+
+- ✅ Refetch automático on focus/reconnect
+
+- ✅ Polling y actualizaciones en tiempo real- Transiciones de página fluidas
+
+- ✅ Optimistic updates
+
+- ✅ Gestión automática de estados de loading/error- Modal de filtros animado
+
+
+
+## 🎨 Tema y Estilos- Efectos de scroll- **Separación de responsabilidades**: Cada capa tiene responsabilidades bien definidas```
+
+
+
+### Paleta de Colores
+
+
+
+```css### Accesibilidad- **Independencia de frameworks**: La lógica de negocio no depende de React o Redux
+
+--color-primary: #1a1a1a;       /* Negro principal */
+
+--color-secondary: #c9a055;     /* Dorado luxury */
+
+--color-text: #1a1a1a;          /* Texto principal */
+
+--color-text-light: #717171;    /* Texto secundario */- Navegación por teclado completa- **Testeable**: Arquitectura que facilita pruebas unitarias e integraciónLa aplicación estará disponible en `http://localhost:5173`
+
+--color-background: #ffffff;    /* Fondo blanco */
+
+```- Etiquetas ARIA descriptivas
+
+
+
+### Tipografías- Contraste de colores WCAG AA- **Escalable**: Estructura que permite crecimiento sin complejidad
+
+
+
+- **Montserrat** - Texto general (sans-serif)- Etiquetas semánticas (`<article>`, `<section>`, `<search>`, etc.)
+
+- **Cinzel** - Logo y títulos destacados (serif)
+
+- Estados de foco visibles- **Mantenible**: Código organizado y fácil de entendermillion-front/If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+## 📱 Compatibilidad
+
+
+
+- ✅ Chrome 90+
+
+- ✅ Firefox 88+## 🔧 Configuración
+
+- ✅ Safari 14+
+
+- ✅ Edge 90+
+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+
+### Variables de Entorno## 🛠️ Stack Tecnológico## 📦 Scripts Disponibles
+
+## 🚀 Build y Deploy
+
+
+
+### Build para Producción
+
+```env
+
+```bash
+
+npm run build# .env
+
+```
+
+VITE_API_BASE_URL=/api/v1### Core├── src/
+
+Genera archivos optimizados en `/dist`:
+
+VITE_API_TIMEOUT=10000
+
+- Minificación de JavaScript y CSS
+
+- Tree-shaking automáticoVITE_ENV=development- **React 19.1** - Librería UI con últimas características
+
+- Code splitting por rutas
+
+- Assets optimizados```
+
+
+
+### Preview de Build- **TypeScript 5.9** - Tipado estático para seguridad en desarrollo```bash
+
+
+
+```bash### Path Aliases
+
+npm run preview
+
+```- **Vite 7.1** - Build tool ultrarrápido con HMR
+
+
+
+## 📝 Convenciones de CódigoEl proyecto utiliza aliases para imports limpios:
+
+
+
+- **Componentes**: PascalCase (`PropertyCard.tsx`)npm run dev           # Inicia servidor de desarrollo con HMR│   ├── core/                        # 🎯 Capa de Dominio (Core Business Logic)```js
+
+- **Hooks**: camelCase con prefijo `use` (`useProperty.ts`)
+
+- **Utilities**: camelCase (`formatCurrency.ts`)```typescript
+
+- **Constantes**: UPPER_SNAKE_CASE (`API_CONFIG`)
+
+- **Interfaces**: PascalCase (`Property`)import { Property } from '@core/domain/entities';### Estado y Datos
+
+
+
+## 🤝 Contribuciónimport { useProperty } from '@presentation/hooks/useProperty';
+
+
+
+Este es un proyecto privado. Para contribuir:import { TEXTS } from '@shared/constants/texts';- **Redux Toolkit 2.10** - Gestión de estado centralizadanpm run build         # Compila para producción
+
+
+
+1. Crear feature branch desde `main````
+
+2. Seguir convenciones de código establecidas
+
+3. Escribir tests para nuevas funcionalidades- **RTK Query** - Data fetching, caching y sincronización de servidor
+
+4. Asegurar que todos los tests pasen
+
+5. Crear Pull Request con descripción detallada**Aliases configurados:**
+
+
+
+## 📄 Licencianpm run preview       # Preview del build de producción│   │   ├── domain/export default defineConfig([
+
+
+
+Proyecto privado - Million Luxury Real Estate- `@/*` → `src/*`
+
+
+
+---- `@core/*` → `src/core/*`### UI y Animaciones
+
+
+
+**Desarrollado con ❤️ usando React + TypeScript + Arquitectura Hexagonal**- `@infrastructure/*` → `src/infrastructure/*`
+
 
 - `@presentation/*` → `src/presentation/*`- **Framer Motion 12.23** - Animaciones fluidas y profesionalesnpm run lint          # Ejecuta ESLint
 
