@@ -1,0 +1,45 @@
+/* PropertyHeader */
+.property-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #ebebeb;
+  padding: 24px;
+  z-index: 10;
+}
+
+.property-header__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.property-header__back {
+  position: absolute;
+  left: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #1a1a1a;
+  color: #1a1a1a;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.property-header__back:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.property-header__spacer {
+  display: none;
+}

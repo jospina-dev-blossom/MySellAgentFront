@@ -9,8 +9,9 @@
 }
 
 .error-message__icon {
-  font-size: 48px;
-  margin-bottom: 16px;
+  color: #c13515;
+  margin: 0 auto 16px;
+  display: block;
 }
 
 .error-message__title {

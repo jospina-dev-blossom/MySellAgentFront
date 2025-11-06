@@ -1,5 +1,7 @@
+import { SearchX } from 'lucide-react';
 import type { Property } from '@core/domain/entities';
 import { PropertyCard } from '../PropertyCard/PropertyCard';
+import { TEXTS } from '@/shared/constants/texts';
 import './PropertyGrid.css';
 
 interface PropertyGridProps {
@@ -9,14 +11,14 @@ interface PropertyGridProps {
 export const PropertyGrid = ({ properties }: PropertyGridProps) => {
   if (properties.length === 0) {
     return (
-      <div className="property-grid">
+      <div className="property-grid property-grid--empty">
         <div className="property-grid__empty">
-          <div className="property-grid__empty-icon">🔍</div>
+          <SearchX className="property-grid__empty-icon" size={64} strokeWidth={1.5} />
           <h3 className="property-grid__empty-title">
-            No se encontraron propiedades
+            {TEXTS.propertiesPage.emptyStateTitle}
           </h3>
           <p className="property-grid__empty-text">
-            Intenta ajustar tu búsqueda o filtros para encontrar lo que buscas
+            {TEXTS.propertiesPage.emptyStateDescription}
           </p>
         </div>
       </div>

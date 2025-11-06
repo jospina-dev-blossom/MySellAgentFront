@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* Colors - Million Luxury Theme */
@@ -20,8 +20,9 @@
   --color-background: #ffffff;
   --color-background-light: #f7f7f7;
 
-  /* Typography - Million uses Cinzel */
-  --font-family: 'Cinzel', serif;
+  /* Typography */
+  --font-family: 'Montserrat', sans-serif;
+  --font-family-logo: 'Cinzel', serif;
   
   /* Spacing */
   --spacing-xs: 4px;

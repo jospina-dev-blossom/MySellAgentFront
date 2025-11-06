@@ -1,0 +1,23 @@
+/* PropertyGallery */
+.property-gallery {
+  margin-bottom: 48px;
+}
+
+.property-gallery__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.property-gallery__image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.property-gallery__image:hover {
+  transform: scale(1.02);
+}

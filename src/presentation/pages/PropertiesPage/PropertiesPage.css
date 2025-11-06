@@ -57,8 +57,9 @@
 }
 
 .properties-page__error-icon {
-  font-size: 48px;
-  margin-bottom: 16px;
+  color: #c13515;
+  margin: 0 auto 16px;
+  display: block;
 }
 
 .properties-page__error-title {
@@ -92,6 +93,9 @@
 
 .properties-page__content {
   padding: 32px 0;
+  min-height: calc(100vh - 388px);
+  display: flex;
+  flex-direction: column;
 }
 
 .properties-page__results {

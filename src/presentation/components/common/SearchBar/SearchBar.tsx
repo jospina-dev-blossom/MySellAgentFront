@@ -1,4 +1,5 @@
 import { useState, type KeyboardEvent } from 'react';
+import { Search, SlidersHorizontal } from 'lucide-react';
 import './SearchBar.css';
 
 interface SearchBarProps {
@@ -45,35 +46,12 @@ export const SearchBar = ({
             disabled={isLoading}
             aria-label="Search"
           >
-            <svg
-              className="search-bar__icon"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
+            <Search className="search-bar__icon" size={20} />
           </button>
         </div>
 
         <button className="search-bar__filters-button" onClick={onFilterClick}>
-          <svg
-            className="search-bar__filter-icon"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-            />
-          </svg>
+          <SlidersHorizontal className="search-bar__filter-icon" size={20} />
           Filters
         </button>
       </div>

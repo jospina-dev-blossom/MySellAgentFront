@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
 import { TEXTS } from '@shared/constants/texts';
 import type { PropertyFilters } from '@core/domain/entities';
 import './FilterModal.css';
@@ -73,19 +74,7 @@ export const FilterModal = ({
             onClick={onClose}
             aria-label={TEXTS.filterModal.close}
           >
-            <svg
-              className="filter-modal__close-icon"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <X className="filter-modal__close-icon" size={24} />
           </button>
         </div>
 

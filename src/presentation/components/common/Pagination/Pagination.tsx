@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { TEXTS } from '@shared/constants/texts';
 import './Pagination.css';
 
@@ -71,19 +72,7 @@ export const Pagination = ({
         disabled={!hasPreviousPage || currentPage === 1}
         aria-label={TEXTS.pagination.previous}
       >
-        <svg
-          className="pagination__arrow"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={3}
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
+        <ChevronLeft className="pagination__arrow" size={24} strokeWidth={3} />
       </button>
 
       {getPageNumbers().map((page, index) => {
@@ -114,19 +103,7 @@ export const Pagination = ({
         disabled={!hasNextPage || currentPage === totalPages}
         aria-label={TEXTS.pagination.next}
       >
-        <svg
-          className="pagination__arrow"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={3}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
+        <ChevronRight className="pagination__arrow" size={24} strokeWidth={3} />
       </button>
     </div>
   );

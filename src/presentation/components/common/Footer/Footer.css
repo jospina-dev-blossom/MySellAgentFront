@@ -29,11 +29,9 @@
 .footer__section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 .footer__logo {
-  margin-bottom: 8px;
 }
 
 .footer__description {

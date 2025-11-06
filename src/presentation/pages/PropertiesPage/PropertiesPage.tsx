@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AlertCircle } from 'lucide-react';
 import { useProperties } from '@presentation/hooks/useProperties';
 import { SearchBar } from '@presentation/components/common/SearchBar/SearchBar';
 import { FilterModal } from '@presentation/components/common/FilterModal/FilterModal';
@@ -42,7 +43,7 @@ export const PropertiesPage = () => {
     return (
       <div className="properties-page">
         <div className="properties-page__error">
-          <div className="properties-page__error-icon">⚠️</div>
+          <AlertCircle className="properties-page__error-icon" size={48} />
           <h2 className="properties-page__error-title">{TEXTS.propertiesPage.errorLoading}</h2>
           <p className="properties-page__error-message">{getErrorMessage(error)}</p>
           <button className="properties-page__error-button" onClick={() => refetch()}>

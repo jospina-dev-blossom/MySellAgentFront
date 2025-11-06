@@ -5,7 +5,8 @@
 
 .million-logo__text {
   display: block;
-  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
   letter-spacing: 8px;
   color: #1a1a1a;
   margin-bottom: 4px;
@@ -30,12 +31,12 @@
 
 /* Footer variant */
 .million-logo--footer .million-logo__text {
+  text-align: left;
   font-size: 32px;
   letter-spacing: 6px;
   color: #ffffff;
 }
 
 .million-logo--footer .million-logo__subtitle {
-  font-size: 10px;
-  letter-spacing: 2px;
+  visibility: hidden;
 }
