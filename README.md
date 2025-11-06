@@ -46,7 +46,9 @@ npm run dev
 
 ```
 
-### Instalación### Prerequisitos
+### Instalación
+
+### Prerequisitos
 
 La aplicación estará disponible en `http://localhost:5173`
 
@@ -66,7 +68,9 @@ npm run test          # Ejecutar testsgit clone <repository-url>- **Node.js 20.1
 
 npm run lint          # Linter
 
-```cd million-front
+```
+
+cd million-front
 
 
 
