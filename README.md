@@ -1,8 +1,8 @@
-# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Front - Real Estate Application# React + TypeScript + Vite
+# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Front - Real Estate Application# React + TypeScript + Vite
 
 
 
-Aplicación web para la gestión y visualización de propiedades inmobiliarias de lujo. Construida con React 19, TypeScript y Vite, implementando arquitectura hexagonal para garantizar escalabilidad y mantenibilidad.
+Aplicación frontend para gestión de propiedades inmobiliarias construida con React 19, TypeScript y Vite, siguiendo arquitectura hexagonal.
 
 
 
@@ -22,31 +22,23 @@ Aplicación web para la gestión y visualización de propiedades inmobiliarias d
 
 
 
-### Instalación### Prerequisitos
+### Instalación y Ejecución### Prerequisitos
 
 
 
 ```bash
 
-# Clonar el repositorio
-
-git clone <repository-url>- **Node.js 20.19+** (recomendado v22.12+)## 🚀 Inicio RápidoAplicación web para la gestión y visualización de propiedades inmobiliarias de lujo. Construida con React 19, TypeScript y Vite, implementando arquitectura hexagonal para garantizar escalabilidad y mantenibilidad.
-
-cd million-front
-
-- npm o yarn
-
 # Instalar dependencias
 
-npm install- API Backend corriendo en `https://localhost:44311`
+npm install- **Node.js 20.19+** (recomendado v22.12+)## 🚀 Inicio RápidoAplicación web para la gestión y visualización de propiedades inmobiliarias de lujo. Construida con React 19, TypeScript y Vite, implementando arquitectura hexagonal para garantizar escalabilidad y mantenibilidad.
 
 
 
-# Configurar variables de entorno
+# Configurar variables de entorno (si es necesario)- npm o yarn
 
 cp .env.example .env
 
-### Instalación### Prerequisitos
+- API Backend corriendo en `https://localhost:44311`
 
 # Iniciar servidor de desarrollo
 
@@ -54,23 +46,105 @@ npm run dev
 
 ```
 
-```bash
+### Instalación### Prerequisitos
 
 La aplicación estará disponible en `http://localhost:5173`
 
-# Clonar el repositorio
 
-## 📦 Scripts Disponibles
 
-git clone <repository-url>- Node.js 20.19+ o 22.12+## 🚀 Inicio RápidoAplicación frontend para gestión de propiedades inmobiliarias construida con React, TypeScript y Vite siguiendo arquitectura hexagonal.This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Scripts Disponibles
 
 ```bash
 
+```bash
+
+npm run dev           # Servidor de desarrollo# Clonar el repositorio
+
+npm run build         # Build de producción
+
+npm run test          # Ejecutar testsgit clone <repository-url>- **Node.js 20.19+** (recomendado v22.12+)## 🚀 Inicio RápidoAplicación web para la gestión y visualización de propiedades inmobiliarias de lujo. Construida con React 19, TypeScript y Vite, implementando arquitectura hexagonal para garantizar escalabilidad y mantenibilidad.
+
+npm run lint          # Linter
+
+```cd million-front
+
+
+
+## 🛠️ Stack Tecnológico- npm o yarn
+
+
+
+- **React 19.1** + **TypeScript 5.9** + **Vite 7.1**# Instalar dependencias
+
+- **Redux Toolkit 2.10** + **RTK Query** - Estado y fetching de datos
+
+- **React Router 7.9** - Navegaciónnpm install- API Backend corriendo en `https://localhost:44311`
+
+- **Framer Motion 12.23** - Animaciones
+
+- **Jest 30.2** + **Testing Library 16.3** - Testing
+
+- **CSS Modules** - Estilos
+
+# Configurar variables de entorno
+
+## 🏗️ Arquitectura
+
+cp .env.example .env
+
+Implementa **Arquitectura Hexagonal (Ports & Adapters)** con separación en capas:
+
+### Instalación### Prerequisitos
+
+- **Core**: Entidades y lógica de negocio pura
+
+- **Infrastructure**: Implementaciones de API (RTK Query)# Iniciar servidor de desarrollo
+
+- **Presentation**: Componentes React, páginas y hooks
+
+- **Shared**: Utilidades y constantesnpm run dev
+
+
+
+## ✨ Características```
+
+
+
+- Listado de propiedades con paginación y filtros```bash
+
+- Búsqueda por nombre y filtros dinámicos (dirección, rango de precios)
+
+- Vista detallada de propiedades con galeríaLa aplicación estará disponible en `http://localhost:5173`
+
+- Animaciones fluidas y diseño responsive
+
+- HTML semántico y accesibilidad completa# Clonar el repositorio
+
+
+
+## 🌐 API Integration## 📦 Scripts Disponibles
+
+
+
+**Base URL**: `https://localhost:44311/api/v1`git clone <repository-url>- Node.js 20.19+ o 22.12+## 🚀 Inicio RápidoAplicación frontend para gestión de propiedades inmobiliarias construida con React, TypeScript y Vite siguiendo arquitectura hexagonal.This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+
+
+- `GET /Properties` - Lista paginada con filtros```bash
+
+- `GET /Properties/{id}` - Detalle de propiedad
+
 npm run dev           # Inicia servidor de desarrollo con HMRcd million-front
+
+RTK Query maneja automáticamente: caché, deduplicación, refetch y estados de loading/error.
 
 npm run build         # Compila para producción
 
+---
+
 npm run preview       # Preview del build de producción- npm o yarn
+
+**Desarrollado con React + TypeScript + Arquitectura Hexagonal**
 
 npm run lint          # Ejecuta ESLint
 
