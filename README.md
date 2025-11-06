@@ -22,7 +22,8 @@ Aplicación frontend para gestión de propiedades inmobiliarias construida con R
 
 
 
-### Instalación y Ejecución### Prerequisitos
+### Instalación y Ejecución
+### Prerequisitos
 
 
 
@@ -57,9 +58,6 @@ La aplicación estará disponible en `http://localhost:5173`
 ### Scripts Disponibles
 
 ```bash
-
-```bash
-
 npm run dev           # Servidor de desarrollo# Clonar el repositorio
 
 npm run build         # Build de producción
