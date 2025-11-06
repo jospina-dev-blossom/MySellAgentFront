@@ -1,240 +1,848 @@
-# Million Front - Real Estate Application# React + TypeScript + Vite
+# Million Luxury - Real Estate Application# Million Luxury - Real Estate Application# Million Front - Real Estate Application# React + TypeScript + Vite
 
 
 
-Aplicación frontend para gestión de propiedades inmobiliarias construida con React, TypeScript y Vite siguiendo arquitectura hexagonal.This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para la gestión y visualización de propiedades inmobiliarias de lujo. Construida con React 19, TypeScript y Vite, implementando arquitectura hexagonal para garantizar escalabilidad y mantenibilidad.
 
 
 
-## 🏗️ ArquitecturaCurrently, two official plugins are available:
+## 🚀 Inicio RápidoAplicación web para la gestión y visualización de propiedades inmobiliarias de lujo. Construida con React 19, TypeScript y Vite, implementando arquitectura hexagonal para garantizar escalabilidad y mantenibilidad.
 
 
 
-Este proyecto implementa **Arquitectura Hexagonal (Ports & Adapters)** para lograr:- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+### Prerequisitos
 
-- Separación de responsabilidades- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- Código testeable y mantenible
 
-- Independencia de frameworks## React Compiler
+- Node.js 20.19+ o 22.12+## 🚀 Inicio RápidoAplicación frontend para gestión de propiedades inmobiliarias construida con React, TypeScript y Vite siguiendo arquitectura hexagonal.This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- Facilidad de cambio de implementaciones
+- npm o yarn
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- API Backend corriendo en `https://localhost:44311`
+
+
+
+### Instalación### Prerequisitos
+
+
+
+```bash
+
+# Clonar el repositorio
+
+git clone <repository-url>- Node.js 20.19+ o 22.12+## 🏗️ ArquitecturaCurrently, two official plugins are available:
+
+cd million-front
+
+- npm o yarn
+
+# Instalar dependencias
+
+npm install- API Backend corriendo en `https://localhost:44311`
+
+
+
+# Configurar variables de entorno
+
+cp .env.example .env
+
+### InstalaciónEste proyecto implementa **Arquitectura Hexagonal (Ports & Adapters)** para lograr:- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+
+# Iniciar servidor de desarrollo
+
+npm run dev
+
+```
+
+```bash- Separación de responsabilidades- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+La aplicación estará disponible en `http://localhost:5173`
+
+# Clonar el repositorio
+
+## 📦 Scripts Disponibles
+
+git clone <repository-url>- Código testeable y mantenible
+
+```bash
+
+npm run dev           # Inicia servidor de desarrollo con HMRcd million-front
+
+npm run build         # Compila para producción
+
+npm run preview       # Preview del build de producción- Independencia de frameworks## React Compiler
+
+npm run lint          # Ejecuta ESLint
+
+npm run test          # Ejecuta tests con Jest# Instalar dependencias
+
+npm run test:watch    # Tests en modo watch
+
+npm run test:coverage # Genera reporte de coberturanpm install- Facilidad de cambio de implementaciones
+
+```
+
+
+
+## 🏗️ Arquitectura
+
+# Configurar variables de entornoThe React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+Este proyecto implementa **Arquitectura Hexagonal (Ports & Adapters)**, separando la aplicación en tres capas principales:
+
+cp .env.example .env
+
+### 🎯 Capas de la Aplicación
 
 ## 📁 Estructura del Proyecto
 
-## Expanding the ESLint configuration
+- **🎯 Core (Dominio)**: Entidades, servicios de negocio y lógica pura sin dependencias externas
+
+- **🔌 Infrastructure**: RTK Query API, configuración y adaptadores de servicios externos  # Iniciar servidor de desarrollo
+
+- **🎨 Presentation**: Componentes React, páginas, hooks, store Redux y rutas
+
+- **🔧 Shared**: Utilidades, constantes y recursos compartidos entre capasnpm run dev## Expanding the ESLint configuration
+
+
+
+### Principios de Diseño```
+
+
+
+- **Separación de responsabilidades**: Cada capa tiene responsabilidades bien definidas```
+
+- **Independencia de frameworks**: La lógica de negocio no depende de React o Redux
+
+- **Testeable**: Arquitectura que facilita pruebas unitarias e integraciónLa aplicación estará disponible en `http://localhost:5173`
+
+- **Escalable**: Estructura que permite crecimiento sin complejidad
+
+- **Mantenible**: Código organizado y fácil de entendermillion-front/If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+
+
+## 🛠️ Stack Tecnológico## 📦 Scripts Disponibles
+
+
+
+### Core├── src/
+
+- **React 19.1** - Librería UI con últimas características
+
+- **TypeScript 5.9** - Tipado estático para seguridad en desarrollo```bash
+
+- **Vite 7.1** - Build tool ultrarrápido con HMR
+
+npm run dev           # Inicia servidor de desarrollo con HMR│   ├── core/                        # 🎯 Capa de Dominio (Core Business Logic)```js
+
+### Estado y Datos
+
+- **Redux Toolkit 2.10** - Gestión de estado centralizadanpm run build         # Compila para producción
+
+- **RTK Query** - Data fetching, caching y sincronización de servidor
+
+npm run preview       # Preview del build de producción│   │   ├── domain/export default defineConfig([
+
+### UI y Animaciones
+
+- **Framer Motion 12.23** - Animaciones fluidas y profesionalesnpm run lint          # Ejecuta ESLint
+
+- **Lucide React 0.552** - Iconos modernos y ligeros
+
+- **CSS Modules** - Estilos encapsuladosnpm run test          # Ejecuta tests con Jest│   │   │   ├── entities/           # Entidades del dominio (Property, Owner, etc.)  globalIgnores(['dist']),
+
+
+
+### Routingnpm run test:watch    # Tests en modo watch
+
+- **React Router 7.9** - Navegación client-side
+
+npm run test:coverage # Genera reporte de cobertura│   │   │   ├── repositories/       # Interfaces de repositorios (puertos)  {
+
+### Testing
+
+- **Jest 30.2** - Framework de testing```
+
+- **Testing Library 16.3** - Testing de componentes React
+
+- **ts-jest 29.4** - Soporte TypeScript para Jest│   │   │   └── usecases/           # Casos de uso de la aplicación    files: ['**/*.{ts,tsx}'],
+
+
+
+## 🎨 Características Principales## 🏗️ Arquitectura
+
+
+
+### ✨ Funcionalidades│   │   └── application/    extends: [
+
+
+
+- **Listado de Propiedades**: Grid responsivo con infinite scrollEste proyecto implementa **Arquitectura Hexagonal (Ports & Adapters)**, separando la aplicación en tres capas principales:
+
+- **Búsqueda Avanzada**: Búsqueda por nombre con validación
+
+- **Filtros Dinámicos**: Filtrado por dirección y rango de precios con validación en tiempo real│   │       └── services/           # Servicios de aplicación      // Other configs...
+
+- **Detalle de Propiedad**: Vista completa con galería, información del propietario e historial de transacciones
+
+- **Animaciones Suaves**: Transiciones y hover effects profesionales### 📁 Estructura del Proyecto
+
+- **HTML Semántico**: Estructura accesible con etiquetas HTML5 apropiadas
+
+- **ARIA Completo**: Atributos de accesibilidad para lectores de pantalla│   │
+
+- **Responsive Design**: Adaptable a móviles, tablets y desktop
 
 ```
 
-million-front/If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎭 Animaciones
 
-├── src/
+million-front/│   ├── infrastructure/              # 🔌 Capa de Infraestructura (Adapters)      // Remove tseslint.configs.recommended and replace with this
 
-│   ├── core/                        # 🎯 Capa de Dominio (Core Business Logic)```js
+Implementadas con Framer Motion:
 
-│   │   ├── domain/export default defineConfig([
+- Entrada progresiva de cards (stagger effect)├── src/
 
-│   │   │   ├── entities/           # Entidades del dominio (Property, Owner, etc.)  globalIgnores(['dist']),
+- Hover effects sutiles en imágenes
 
-│   │   │   ├── repositories/       # Interfaces de repositorios (puertos)  {
+- Transiciones de página fluidas│   ├── core/                      # 🎯 Capa de Dominio│   │   ├── api/                    # Cliente HTTP (Axios)      tseslint.configs.recommendedTypeChecked,
 
-│   │   │   └── usecases/           # Casos de uso de la aplicación    files: ['**/*.{ts,tsx}'],
+- Modal de filtros animado
 
-│   │   └── application/    extends: [
+- Efectos de scroll│   │   └── domain/
 
-│   │       └── services/           # Servicios de aplicación      // Other configs...
 
-│   │
 
-│   ├── infrastructure/              # 🔌 Capa de Infraestructura (Adapters)      // Remove tseslint.configs.recommended and replace with this
+### ♿ Accesibilidad│   │       ├── entities/          # Entidades del dominio (Property, Owner, etc.)│   │   ├── repositories/           # Implementaciones de repositorios      // Alternatively, use this for stricter rules
 
-│   │   ├── api/                    # Cliente HTTP (Axios)      tseslint.configs.recommendedTypeChecked,
 
-│   │   ├── repositories/           # Implementaciones de repositorios      // Alternatively, use this for stricter rules
 
-│   │   └── config/                 # Configuraciones (API URLs, etc.)      tseslint.configs.strictTypeChecked,
+- Navegación por teclado completa│   │       └── services/          # Lógica de negocio pura
 
-│   │      // Optionally, add this for stylistic rules
+- Etiquetas ARIA descriptivas
 
-│   ├── presentation/                # 🎨 Capa de Presentación (UI)      tseslint.configs.stylisticTypeChecked,
+- Contraste de colores WCAG AA│   ││   │   └── config/                 # Configuraciones (API URLs, etc.)      tseslint.configs.strictTypeChecked,
 
-│   │   ├── components/
+- Etiquetas semánticas (`<article>`, `<section>`, `<search>`, etc.)
 
-│   │   │   ├── common/            # Componentes reutilizables      // Other configs...
+- Estados de foco visibles│   ├── infrastructure/            # 🔌 Capa de Infraestructura
 
-│   │   │   └── properties/        # Componentes específicos de propiedades    ],
 
-│   │   ├── pages/                 # Páginas/Vistas    languageOptions: {
 
-│   │   ├── hooks/                 # Custom Hooks      parserOptions: {
+## 🔧 Configuración│   │   ├── api/                   # RTK Query API (propertyApi)│   │      // Optionally, add this for stylistic rules
 
-│   │   ├── store/                 # Redux Store        project: ['./tsconfig.node.json', './tsconfig.app.json'],
 
-│   │   │   └── slices/           # Redux Slices        tsconfigRootDir: import.meta.dirname,
 
-│   │   └── routes/               # Configuración de rutas      },
+### Variables de Entorno│   │   └── config/                # Configuración de API
 
-│   │      // other options...
+
+
+```env│   ││   ├── presentation/                # 🎨 Capa de Presentación (UI)      tseslint.configs.stylisticTypeChecked,
+
+# .env
+
+VITE_API_BASE_URL=/api/v1│   ├── presentation/              # 🎨 Capa de Presentación
+
+VITE_API_TIMEOUT=10000
+
+VITE_ENV=development│   │   ├── components/│   │   ├── components/
+
+```
+
+│   │   │   ├── common/           # Componentes reutilizables
+
+### Path Aliases
+
+│   │   │   ├── properties/       # Componentes de propiedades│   │   │   ├── common/            # Componentes reutilizables      // Other configs...
+
+El proyecto utiliza aliases para imports limpios:
+
+│   │   │   └── propertyDetail/   # Componentes de detalle
+
+```typescript
+
+import { Property } from '@core/domain/entities';│   │   ├── pages/                # Páginas principales│   │   │   └── properties/        # Componentes específicos de propiedades    ],
+
+import { useProperty } from '@presentation/hooks/useProperty';
+
+import { TEXTS } from '@shared/constants/texts';│   │   ├── hooks/                # Custom hooks
+
+```
+
+│   │   ├── store/                # Redux store│   │   ├── pages/                 # Páginas/Vistas    languageOptions: {
+
+**Aliases configurados:**
+
+- `@/*` → `src/*`│   │   └── routes/               # Configuración de rutas
+
+- `@core/*` → `src/core/*`
+
+- `@infrastructure/*` → `src/infrastructure/*`│   ││   │   ├── hooks/                 # Custom Hooks      parserOptions: {
+
+- `@presentation/*` → `src/presentation/*`
+
+- `@shared/*` → `src/shared/*`│   └── shared/                    # 🔧 Recursos Compartidos
+
+
+
+### Proxy de Desarrollo│       ├── utils/                 # Utilidades (formatters, errorHandler)│   │   ├── store/                 # Redux Store        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+
+
+
+Vite está configurado para proxy de la API y evitar problemas de CORS:│       └── constants/             # Constantes y textos
+
+
+
+```typescript││   │   │   └── slices/           # Redux Slices        tsconfigRootDir: import.meta.dirname,
+
+// vite.config.ts
+
+server: {└── tests/
+
+  proxy: {
+
+    '/api': {    └── unit/                      # Tests unitarios de componentes│   │   └── routes/               # Configuración de rutas      },
+
+      target: 'https://localhost:44311',
+
+      changeOrigin: true,```
+
+      secure: false
+
+    }│   │      // other options...
+
+  }
+
+}### 🎯 Principios de Diseño
+
+```
 
 │   └── shared/                     # 🔧 Recursos Compartidos    },
 
-│       ├── utils/                 # Utilidades  },
+## 🧪 Testing
 
-│       ├── types/                 # Tipos TypeScript globales])
+- **Separación de responsabilidades**: Cada capa tiene responsabilidades bien definidas
 
-│       └── constants/             # Constantes```
+### Ejecutar Tests
 
-│
+- **Independencia de frameworks**: La lógica de negocio no depende de React o Redux│       ├── utils/                 # Utilidades  },
 
-└── tests/You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
 
-    ├── unit/                      # Tests unitarios
+# Todos los tests- **Testeable**: Arquitectura que facilita pruebas unitarias e integración
 
-    └── integration/               # Tests de integración```js
+npm run test
 
-```// eslint.config.js
+- **Escalable**: Estructura que permite crecimiento sin complejidad│       ├── types/                 # Tipos TypeScript globales])
 
-import reactX from 'eslint-plugin-react-x'
+# Tests en modo watch
 
-## 🎯 Principios de Arquitectura Hexagonalimport reactDom from 'eslint-plugin-react-dom'
+npm run test:watch- **Mantenible**: Código organizado y fácil de entender
 
 
 
-### Capa de Dominio (Core)export default defineConfig([
+# Con cobertura│       └── constants/             # Constantes```
 
-- **Entities**: Modelos de negocio puros sin dependencias externas  globalIgnores(['dist']),
+npm run test:coverage
 
-- **Repositories**: Interfaces (puertos) que definen contratos  {
+```## 🛠️ Stack Tecnológico
 
-- **Use Cases**: Lógica de negocio y reglas de la aplicación    files: ['**/*.{ts,tsx}'],
 
-    extends: [
 
-### Capa de Infraestructura      // Other configs...
+### Cobertura Actual│
 
-- **API**: Implementación de clientes HTTP      // Enable lint rules for React
 
-- **Repositories**: Adaptadores que implementan las interfaces del dominio      reactX.configs['recommended-typescript'],
 
-- **Config**: Configuraciones específicas de infraestructura      // Enable lint rules for React DOM
+- **SearchBar**: 9/9 tests ✅### Core
 
-      reactDom.configs.recommended,
+- **FilterModal**: 7 tests escritos
 
-### Capa de Presentación    ],
+- **PropertyCard**: 10 tests escritos- **React 19.1** - Librería UI con últimas características└── tests/You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-- **Components**: Componentes React organizados por funcionalidad    languageOptions: {
 
-- **Pages**: Páginas principales de la aplicación      parserOptions: {
 
-- **Store**: Gestión de estado global con Redux Toolkit        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+**Threshold configurado**: 70% en branches, functions, lines y statements- **TypeScript 5.9** - Tipado estático para seguridad en desarrollo
 
-- **Hooks**: Custom hooks para lógica reutilizable        tsconfigRootDir: import.meta.dirname,
+
+
+## 🌐 Integración con API- **Vite 7.1** - Build tool ultrarrápido con HMR    ├── unit/                      # Tests unitarios
+
+
+
+### Endpoints Consumidos
+
+
+
+**Base URL**: `https://localhost:44311/api/v1`### Estado y Datos    └── integration/               # Tests de integración```js
+
+
+
+- `GET /Properties` - Lista paginada de propiedades con filtros- **Redux Toolkit 2.10** - Gestión de estado con RTK Query
+
+- `GET /Properties/{id}` - Detalle completo de una propiedad
+
+- **RTK Query** - Fetching y caching de datos (reemplaza Axios)```// eslint.config.js
+
+### Filtros Disponibles
+
+
+
+```typescript
+
+{### UI y Animacionesimport reactX from 'eslint-plugin-react-x'
+
+  name?: string;          // Búsqueda por nombre
+
+  address?: string;       // Filtro por dirección- **Framer Motion 12.23** - Animaciones fluidas y profesionales
+
+  minPrice?: string;      // Precio mínimo
+
+  maxPrice?: string;      // Precio máximo- **Lucide React 0.552** - Iconos modernos y ligeros## 🎯 Principios de Arquitectura Hexagonalimport reactDom from 'eslint-plugin-react-dom'
+
+  pageNumber?: number;    // Número de página
+
+  pageSize?: number;      // Tamaño de página- **CSS Modules** - Estilos encapsulados
+
+}
+
+```
+
+
+
+### RTK Query - Caché y Optimización### Routing
+
+
+
+RTK Query maneja automáticamente:- **React Router 7.9** - Navegación client-side### Capa de Dominio (Core)export default defineConfig([
+
+- ✅ Caché de peticiones con invalidación inteligente
+
+- ✅ Deduplicación de requests simultáneos
+
+- ✅ Refetch automático on focus/reconnect
+
+- ✅ Polling y actualizaciones en tiempo real### Testing- **Entities**: Modelos de negocio puros sin dependencias externas  globalIgnores(['dist']),
+
+- ✅ Optimistic updates
+
+- ✅ Gestión automática de estados de loading/error- **Jest 30.2** - Framework de testing
+
+
+
+## 🎨 Tema y Estilos- **Testing Library 16.3** - Testing de componentes React- **Repositories**: Interfaces (puertos) que definen contratos  {
+
+
+
+### Paleta de Colores- **ts-jest 29.4** - Soporte TypeScript para Jest
+
+
+
+```css- **Use Cases**: Lógica de negocio y reglas de la aplicación    files: ['**/*.{ts,tsx}'],
+
+--color-primary: #1a1a1a;       /* Negro principal */
+
+--color-secondary: #c9a055;     /* Dorado luxury */## 🎨 Características Principales
+
+--color-text: #1a1a1a;          /* Texto principal */
+
+--color-text-light: #717171;    /* Texto secundario */    extends: [
+
+--color-background: #ffffff;    /* Fondo blanco */
+
+```### ✨ Funcionalidades
+
+
+
+### Tipografías### Capa de Infraestructura      // Other configs...
+
+
+
+- **Montserrat** - Texto general (sans-serif)- **Listado de Propiedades**: Grid responsivo con infinite scroll
+
+- **Cinzel** - Logo y títulos destacados (serif)
+
+- **Búsqueda Avanzada**: Búsqueda por nombre con validación- **API**: Implementación de clientes HTTP      // Enable lint rules for React
+
+## 📱 Compatibilidad
+
+- **Filtros Dinámicos**: Filtrado por dirección y rango de precios con validación en tiempo real
+
+- ✅ Chrome 90+
+
+- ✅ Firefox 88+- **Detalle de Propiedad**: Vista completa con galería, información del propietario e historial de transacciones- **Repositories**: Adaptadores que implementan las interfaces del dominio      reactX.configs['recommended-typescript'],
+
+- ✅ Safari 14+
+
+- ✅ Edge 90+- **Animaciones Suaves**: Transiciones y hover effects profesionales
+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+
+- **HTML Semántico**: Estructura accesible con etiquetas HTML5 apropiadas- **Config**: Configuraciones específicas de infraestructura      // Enable lint rules for React DOM
+
+## 🚀 Build y Deploy
+
+- **ARIA Completo**: Atributos de accesibilidad para lectores de pantalla
+
+### Build para Producción
+
+- **Responsive Design**: Adaptable a móviles, tablets y desktop      reactDom.configs.recommended,
+
+```bash
+
+npm run build
+
+```
+
+### 🎭 Animaciones### Capa de Presentación    ],
+
+Genera archivos optimizados en `/dist`:
+
+- Minificación de JavaScript y CSS
+
+- Tree-shaking automático
+
+- Code splitting por rutasImplementadas con Framer Motion:- **Components**: Componentes React organizados por funcionalidad    languageOptions: {
+
+- Assets optimizados
+
+- Entrada progresiva de cards (stagger effect)
+
+### Preview de Build
+
+- Hover effects sutiles en imágenes- **Pages**: Páginas principales de la aplicación      parserOptions: {
+
+```bash
+
+npm run preview- Transiciones de página fluidas
+
+```
+
+- Modal de filtros animado- **Store**: Gestión de estado global con Redux Toolkit        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+
+## 📝 Convenciones de Código
+
+- Efectos de scroll
+
+- **Componentes**: PascalCase (`PropertyCard.tsx`)
+
+- **Hooks**: camelCase con prefijo `use` (`useProperty.ts`)- **Hooks**: Custom hooks para lógica reutilizable        tsconfigRootDir: import.meta.dirname,
+
+- **Utilities**: camelCase (`formatCurrency.ts`)
+
+- **Constantes**: UPPER_SNAKE_CASE (`API_CONFIG`)### ♿ Accesibilidad
+
+- **Interfaces**: PascalCase (`Property`)
 
       },
 
-## 🛠️ Tecnologías      // other options...
+## 🤝 Contribución
 
-    },
+- Navegación por teclado completa
+
+Este es un proyecto privado. Para contribuir:
+
+- Etiquetas ARIA descriptivas## 🛠️ Tecnologías      // other options...
+
+1. Crear feature branch desde `main`
+
+2. Seguir convenciones de código establecidas- Contraste de colores WCAG AA
+
+3. Escribir tests para nuevas funcionalidades
+
+4. Asegurar que todos los tests pasen- Etiquetas semánticas (`<article>`, `<section>`, `<search>`, etc.)    },
+
+5. Crear Pull Request con descripción detallada
+
+- Estados de foco visibles
+
+## 📄 Licencia
 
 - **React 19** - Librería UI  },
 
-- **TypeScript** - Tipado estático])
+Proyecto privado - Million Luxury Real Estate
 
-- **Vite** - Build tool y dev server```
-
-- **Redux Toolkit** - Gestión de estado
-- **React Router** - Enrutamiento
-- **Axios** - Cliente HTTP
-- **Jest** - Testing framework
-- **React Testing Library** - Testing de componentes
-
-## 📦 Dependencias Instaladas
-
-### Producción
-- `@reduxjs/toolkit` - Redux Toolkit para gestión de estado
-- `react-redux` - Bindings de React para Redux
-- `axios` - Cliente HTTP
-- `react-router-dom` - Enrutamiento
-
-### Desarrollo
-- `jest` - Framework de testing
-- `@testing-library/react` - Testing de componentes React
-- `@testing-library/jest-dom` - Matchers adicionales para Jest
-- `@testing-library/user-event` - Simulación de interacciones
-- `ts-jest` - Soporte de TypeScript para Jest
-- `jest-environment-jsdom` - Entorno DOM para tests
-- `identity-obj-proxy` - Mock de módulos CSS
-
-## 🚀 Scripts Disponibles
-
-```bash
-# Desarrollo
-npm run dev              # Inicia servidor de desarrollo
-
-# Build
-npm run build           # Compila para producción
-
-# Testing
-npm run test            # Ejecuta tests
-npm run test:watch      # Tests en modo watch
-npm run test:coverage   # Tests con coverage
-
-# Linting
-npm run lint            # Ejecuta ESLint
-
-# Preview
-npm run preview         # Preview de build de producción
-```
-
-## 🧪 Testing
-
-El proyecto incluye configuración completa de Jest con:
-- Soporte para TypeScript
-- Testing Library para componentes React
-- Path aliases configurados
-- Coverage mínimo del 70%
-
-## 🎨 Patrones de Diseño Implementables
-
-- **HOC (Higher-Order Components)** - Para lógica compartida
-- **Provider Pattern** - Context API y Redux
-- **Container/Presentational** - Separación de lógica y UI
-- **Compound Components** - Componentes complejos
-- **Custom Hooks** - Lógica reutilizable
-
-## 📝 Path Aliases
-
-El proyecto tiene configurados los siguientes aliases:
-- `@/*` - src/
-- `@core/*` - src/core/
-- `@infrastructure/*` - src/infrastructure/
-- `@presentation/*` - src/presentation/
-- `@shared/*` - src/shared/
-
-## 🔗 Integración con Backend
-
-La aplicación se conectará a una API .NET que proporciona:
-- Listado de propiedades
-- Filtros (nombre, dirección, rango de precio)
-- Detalles de propiedades individuales
-
-## 📋 Próximos Pasos
-
-1. Definir entidades del dominio
-2. Crear interfaces de repositorios
-3. Implementar casos de uso
-4. Configurar Redux Store
-5. Crear componentes de UI
-6. Implementar filtros y búsqueda
-7. Agregar tests unitarios
-8. Implementar optimizaciones de performance
-
-## ⚠️ Nota sobre Node.js
-
-Este proyecto requiere Node.js v20.19+ o v22.12+. Si encuentras errores relacionados con la versión, considera actualizar Node.js.
+## 🔧 Configuración
 
 ---
 
-**Arquitectura Hexagonal** permite que el dominio sea el centro de la aplicación, independiente de frameworks y librerías externas, facilitando testing, mantenibilidad y escalabilidad.
+- **TypeScript** - Tipado estático])
+
+**Desarrollado con ❤️ usando React + TypeScript + Arquitectura Hexagonal**
+
+### Variables de Entorno
+
+- **Vite** - Build tool y dev server```
+
+```env
+
+# .env- **Redux Toolkit** - Gestión de estado
+
+VITE_API_BASE_URL=/api/v1- **React Router** - Enrutamiento
+
+VITE_API_TIMEOUT=10000- **Axios** - Cliente HTTP
+
+VITE_ENV=development- **Jest** - Testing framework
+
+```- **React Testing Library** - Testing de componentes
+
+
+
+### Path Aliases## 📦 Dependencias Instaladas
+
+
+
+El proyecto utiliza aliases para imports limpios:### Producción
+
+- `@reduxjs/toolkit` - Redux Toolkit para gestión de estado
+
+```typescript- `react-redux` - Bindings de React para Redux
+
+import { Property } from '@core/domain/entities';- `axios` - Cliente HTTP
+
+import { useProperty } from '@presentation/hooks/useProperty';- `react-router-dom` - Enrutamiento
+
+import { TEXTS } from '@shared/constants/texts';
+
+```### Desarrollo
+
+- `jest` - Framework de testing
+
+**Aliases configurados:**- `@testing-library/react` - Testing de componentes React
+
+- `@/*` → `src/*`- `@testing-library/jest-dom` - Matchers adicionales para Jest
+
+- `@core/*` → `src/core/*`- `@testing-library/user-event` - Simulación de interacciones
+
+- `@infrastructure/*` → `src/infrastructure/*`- `ts-jest` - Soporte de TypeScript para Jest
+
+- `@presentation/*` → `src/presentation/*`- `jest-environment-jsdom` - Entorno DOM para tests
+
+- `@shared/*` → `src/shared/*`- `identity-obj-proxy` - Mock de módulos CSS
+
+
+
+### Proxy de Desarrollo## 🚀 Scripts Disponibles
+
+
+
+Vite está configurado para proxy de la API y evitar problemas de CORS:```bash
+
+# Desarrollo
+
+```typescriptnpm run dev              # Inicia servidor de desarrollo
+
+// vite.config.ts
+
+server: {# Build
+
+  proxy: {npm run build           # Compila para producción
+
+    '/api': {
+
+      target: 'https://localhost:44311',# Testing
+
+      changeOrigin: true,npm run test            # Ejecuta tests
+
+      secure: falsenpm run test:watch      # Tests en modo watch
+
+    }npm run test:coverage   # Tests con coverage
+
+  }
+
+}# Linting
+
+```npm run lint            # Ejecuta ESLint
+
+
+
+## 🧪 Testing# Preview
+
+npm run preview         # Preview de build de producción
+
+### Ejecutar Tests```
+
+
+
+```bash## 🧪 Testing
+
+# Todos los tests
+
+npm run testEl proyecto incluye configuración completa de Jest con:
+
+- Soporte para TypeScript
+
+# Tests en modo watch- Testing Library para componentes React
+
+npm run test:watch- Path aliases configurados
+
+- Coverage mínimo del 70%
+
+# Con cobertura
+
+npm run test:coverage## 🎨 Patrones de Diseño Implementables
+
+```
+
+- **HOC (Higher-Order Components)** - Para lógica compartida
+
+### Cobertura Actual- **Provider Pattern** - Context API y Redux
+
+- **Container/Presentational** - Separación de lógica y UI
+
+- **SearchBar**: 9/9 tests ✅- **Compound Components** - Componentes complejos
+
+- **FilterModal**: 7 tests escritos- **Custom Hooks** - Lógica reutilizable
+
+- **PropertyCard**: 10 tests escritos
+
+## 📝 Path Aliases
+
+**Threshold configurado**: 70% en branches, functions, lines y statements
+
+El proyecto tiene configurados los siguientes aliases:
+
+### Estructura de Tests- `@/*` - src/
+
+- `@core/*` - src/core/
+
+```- `@infrastructure/*` - src/infrastructure/
+
+tests/- `@presentation/*` - src/presentation/
+
+└── unit/- `@shared/*` - src/shared/
+
+    └── presentation/
+
+        └── components/## 🔗 Integración con Backend
+
+            ├── SearchBar.test.tsx      # ✅ 100% passing
+
+            ├── FilterModal.test.tsx    # ⚠️  Path alias issuesLa aplicación se conectará a una API .NET que proporciona:
+
+            └── PropertyCard.test.tsx   # ⚠️  Path alias issues- Listado de propiedades
+
+```- Filtros (nombre, dirección, rango de precio)
+
+- Detalles de propiedades individuales
+
+## 🌐 Integración con API
+
+## 📋 Próximos Pasos
+
+### Endpoints Consumidos
+
+1. Definir entidades del dominio
+
+**Base URL**: `https://localhost:44311/api/v1`2. Crear interfaces de repositorios
+
+3. Implementar casos de uso
+
+- `GET /Properties` - Lista paginada de propiedades con filtros4. Configurar Redux Store
+
+- `GET /Properties/{id}` - Detalle completo de una propiedad5. Crear componentes de UI
+
+6. Implementar filtros y búsqueda
+
+### Filtros Disponibles7. Agregar tests unitarios
+
+8. Implementar optimizaciones de performance
+
+```typescript
+
+{## ⚠️ Nota sobre Node.js
+
+  name?: string;          // Búsqueda por nombre
+
+  address?: string;       // Filtro por direcciónEste proyecto requiere Node.js v20.19+ o v22.12+. Si encuentras errores relacionados con la versión, considera actualizar Node.js.
+
+  minPrice?: string;      // Precio mínimo
+
+  maxPrice?: string;      // Precio máximo---
+
+  pageNumber?: number;    // Número de página
+
+  pageSize?: number;      // Tamaño de página**Arquitectura Hexagonal** permite que el dominio sea el centro de la aplicación, independiente de frameworks y librerías externas, facilitando testing, mantenibilidad y escalabilidad.
+
+}
+```
+
+### Caché y Optimización
+
+RTK Query maneja automáticamente:
+- ✅ Caché de peticiones
+- ✅ Invalidación inteligente
+- ✅ Deduplicación de requests
+- ✅ Refetch on focus/reconnect
+- ✅ Optimistic updates
+
+## 🎨 Tema y Estilos
+
+### Paleta de Colores
+
+```css
+--color-primary: #1a1a1a;       /* Negro principal */
+--color-secondary: #c9a055;     /* Dorado luxury */
+--color-text: #1a1a1a;          /* Texto principal */
+--color-text-light: #717171;    /* Texto secundario */
+--color-background: #ffffff;    /* Fondo blanco */
+```
+
+### Tipografías
+
+- **Montserrat** - Texto general (sans-serif)
+- **Cinzel** - Logo y títulos destacados (serif)
+
+## 📱 Compatibilidad
+
+- ✅ Chrome 90+
+- ✅ Firefox 88+
+- ✅ Safari 14+
+- ✅ Edge 90+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🚀 Build y Deploy
+
+### Build para Producción
+
+```bash
+npm run build
+```
+
+Genera archivos optimizados en `/dist`:
+- Minificación de JavaScript y CSS
+- Tree-shaking automático
+- Code splitting por rutas
+- Assets optimizados
+
+### Preview de Build
+
+```bash
+npm run preview
+```
+
+## 📝 Convenciones de Código
+
+- **Componentes**: PascalCase (`PropertyCard.tsx`)
+- **Hooks**: camelCase con prefijo `use` (`useProperty.ts`)
+- **Utilities**: camelCase (`formatCurrency.ts`)
+- **Constantes**: UPPER_SNAKE_CASE (`API_CONFIG`)
+- **Interfaces**: PascalCase con prefijo `I` opcional (`Property`)
+
+## 🤝 Contribución
+
+Este es un proyecto privado. Para contribuir:
+
+1. Crear feature branch desde `main`
+2. Seguir convenciones de código establecidas
+3. Escribir tests para nuevas funcionalidades
+4. Asegurar que todos los tests pasen
+5. Crear Pull Request con descripción detallada
+
+## 📄 Licencia
+
+Proyecto privado - Million Luxury Real Estate
+
+---
+
+**Desarrollado con ❤️ usando React + TypeScript + Arquitectura Hexagonal**
