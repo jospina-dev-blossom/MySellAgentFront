@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
-import { useProperties } from '@presentation/hooks/useProperties';
+import { useInfiniteProperties } from '@presentation/hooks/useInfiniteProperties';
 import { SearchBar } from '@presentation/components/common/SearchBar/SearchBar';
 import { FilterModal } from '@presentation/components/common/FilterModal/FilterModal';
 import { PropertyGrid } from '@presentation/components/properties/PropertyGrid/PropertyGrid';
-import { Pagination } from '@presentation/components/common/Pagination/Pagination';
+import { InfiniteScroll } from '@presentation/components/common/InfiniteScroll';
 import { Footer } from '@presentation/components/common/Footer/Footer';
 import { MillionLogo } from '@presentation/components/common/MillionLogo';
 import { TEXTS } from '@shared/constants/texts';
@@ -16,17 +16,18 @@ export const PropertiesPage = () => {
 
   const {
     properties,
-    pagination,
+    hasMore,
     isLoading,
+    isFetching,
     isError,
     error,
     filters,
-    goToPage,
+    loadMore,
     refetch,
     handleSearch,
     handleApplyFilters,
     handleClearFilters,
-  } = useProperties();
+  } = useInfiniteProperties();
 
   if (isLoading) {
     return (
@@ -68,17 +69,13 @@ export const PropertiesPage = () => {
       </header>
 
       <main className="properties-page__content">
-        <PropertyGrid properties={properties} />
-
-        {pagination && pagination.totalPages > 1 && (
-          <Pagination
-            currentPage={pagination.pageNumber}
-            totalPages={pagination.totalPages}
-            hasNextPage={pagination.hasNextPage}
-            hasPreviousPage={pagination.hasPreviousPage}
-            onPageChange={goToPage}
-          />
-        )}
+        <InfiniteScroll
+          onLoadMore={loadMore}
+          hasMore={hasMore}
+          isLoading={isFetching}
+        >
+          <PropertyGrid properties={properties} />
+        </InfiniteScroll>
       </main>
 
       <FilterModal

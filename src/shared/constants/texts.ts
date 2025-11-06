@@ -18,6 +18,7 @@ export const TEXTS = {
     emptyStateTitle: 'No properties found',
     emptyStateDescription: 'Try adjusting your search or filters to find what you\'re looking for',
     loadingProperties: 'Loading properties...',
+    loadingMore: 'Loading more properties...',
     errorLoading: 'Error loading properties',
   },
 
