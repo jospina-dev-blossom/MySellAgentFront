@@ -10,8 +10,8 @@ export const store = configureStore({
   reducer: {
     // RTK Query reducer
     [propertyApi.reducerPath]: propertyApi.reducer,
-    // Aquí puedes agregar otros reducers si los necesitas
   },
+  
   // Middleware de RTK Query para cache, invalidación, polling, etc.
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(propertyApi.middleware),

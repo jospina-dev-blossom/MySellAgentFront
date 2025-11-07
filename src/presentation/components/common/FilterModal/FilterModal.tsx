@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { TEXTS } from '@shared/constants/texts';
 import type { PropertyFilters } from '@core/domain/entities';
+import { useFilterModal } from '@presentation/hooks/useFilterModal';
 import './FilterModal.css';
 
 interface FilterModalProps {
@@ -20,92 +20,17 @@ export const FilterModal = ({
   onClear,
   currentFilters = {},
 }: FilterModalProps) => {
-  const [address, setAddress] = useState(currentFilters.address || '');
-  const [minPrice, setMinPrice] = useState(currentFilters.minPrice?.toString() || '');
-  const [maxPrice, setMaxPrice] = useState(currentFilters.maxPrice?.toString() || '');
-  const [priceError, setPriceError] = useState('');
-
-  useEffect(() => {
-    if (isOpen) {
-      setAddress(currentFilters.address || '');
-      setMinPrice(currentFilters.minPrice?.toString() || '');
-      setMaxPrice(currentFilters.maxPrice?.toString() || '');
-      setPriceError('');
-    }
-  }, [isOpen, currentFilters]);
-
-  const validatePrices = (): boolean => {
-    if (minPrice && maxPrice) {
-      const min = parseFloat(minPrice);
-      const max = parseFloat(maxPrice);
-      
-      if (max < min) {
-        setPriceError('El precio máximo no puede ser menor al precio mínimo');
-        return false;
-      }
-    }
-    setPriceError('');
-    return true;
-  };
-
-  const handleMinPriceChange = (value: string) => {
-    setMinPrice(value);
-    if (maxPrice && value) {
-      const min = parseFloat(value);
-      const max = parseFloat(maxPrice);
-      if (max < min) {
-        setPriceError('El precio máximo no puede ser menor al precio mínimo');
-      } else {
-        setPriceError('');
-      }
-    } else {
-      setPriceError('');
-    }
-  };
-
-  const handleMaxPriceChange = (value: string) => {
-    setMaxPrice(value);
-    if (minPrice && value) {
-      const min = parseFloat(minPrice);
-      const max = parseFloat(value);
-      if (max < min) {
-        setPriceError('El precio máximo no puede ser menor al precio mínimo');
-      } else {
-        setPriceError('');
-      }
-    } else {
-      setPriceError('');
-    }
-  };
-
-  const handleApply = () => {
-    if (!validatePrices()) {
-      return;
-    }
-
-    const filters: Partial<PropertyFilters> = {};
-    
-    if (address.trim()) {
-      filters.address = address.trim();
-    }
-    if (minPrice) {
-      filters.minPrice = minPrice;
-    }
-    if (maxPrice) {
-      filters.maxPrice = maxPrice;
-    }
-    
-    onApply(filters);
-    onClose();
-  };
-
-  const handleClear = () => {
-    setAddress('');
-    setMinPrice('');
-    setMaxPrice('');
-    onClear();
-    onClose();
-  };
+  const {
+    address,
+    minPrice,
+    maxPrice,
+    priceError,
+    setAddress,
+    handleMinPriceChange,
+    handleMaxPriceChange,
+    handleApply: applyFilters,
+    handleClear: clearFilters,
+  } = useFilterModal({ isOpen, currentFilters });
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -236,7 +161,7 @@ export const FilterModal = ({
               <motion.button 
                 type="button"
                 className="filter-modal__clear" 
-                onClick={handleClear}
+                onClick={() => clearFilters(onClear, onClose)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -245,7 +170,7 @@ export const FilterModal = ({
               <motion.button 
                 type="button"
                 className="filter-modal__apply" 
-                onClick={handleApply}
+                onClick={() => applyFilters(onApply, onClose)}
                 disabled={!!priceError}
                 whileHover={{ scale: priceError ? 1 : 1.05 }}
                 whileTap={{ scale: priceError ? 1 : 0.95 }}
