@@ -3,11 +3,6 @@
  * Funciones puras de lógica de negocio
  */
 
-// Property Services
-export {
-  isRecentProperty,
-} from './propertyService';
-
 // PropertyDetail Services
 export {
   getEnabledImages,
