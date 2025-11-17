@@ -1,1 +1,0 @@
-export { PropertyOwner } from './PropertyOwner';

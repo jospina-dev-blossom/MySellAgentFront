@@ -1,2 +1,4 @@
-export { PropertiesPage } from './PropertiesPage/PropertiesPage';
-export { PropertyDetailPage } from './PropertyDetailPage/PropertyDetailPage';
+export { LandingPage } from './LandingPage/LandingPage';
+export { CustomizationPage } from './CustomizationPage/CustomizationPage';
+export { LoginPage } from './LoginPage';
+

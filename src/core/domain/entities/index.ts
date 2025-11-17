@@ -1,19 +1,26 @@
 /**
  * Domain Entities Export
- * Punto de entrada centralizado solo para tipos e interfaces
  */
 
-// Property Entity
 export type {
-  Property,
-  PropertyFilters,
-  PagedResult,
-} from './Property';
+  AgentConfiguration,
+  AgentTone,
+  EmojiUsage,
+  AgentPersonality,
+  AgentCapabilities,
+  AgentAppearance,
+  CommunicationStyle,
+  Integration,
+} from './AgentConfiguration';
 
-// PropertyDetail Entity
 export type {
-  PropertyDetail,
-  Owner,
-  PropertyImage,
-  PropertyTrace,
-} from './PropertyDetail';
+  FormState,
+  FormStep,
+  FieldValidation,
+} from './FormState';
+
+export type {
+  User,
+  AuthCredentials,
+  AuthState,
+} from './User';

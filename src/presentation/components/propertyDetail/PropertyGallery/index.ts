@@ -1,1 +1,0 @@
-export { PropertyGallery } from './PropertyGallery';
