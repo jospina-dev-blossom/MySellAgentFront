@@ -1,4 +1,4 @@
-# Million Front
+# Sell agent from
 
 Aplicación frontend para gestión y visualización de propiedades inmobiliarias, construida con React, TypeScript y Vite.
 
@@ -21,8 +21,8 @@ Aplicación frontend para gestión y visualización de propiedades inmobiliarias
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/jospina-dev-blossom/MillionFront.git
-cd MillionFront
+git clone https://github.com/jospina-dev-blossom/MySellAgentFront.git
+cd MySellAgentFront
 ```
 
 2. Instala las dependencias:
@@ -106,16 +106,9 @@ src/
 | `npm run test:watch` | Ejecuta los tests en modo watch |
 | `npm run test:coverage` | Genera reporte de cobertura |
 
-## 🔗 API Backend
-
-Este proyecto se conecta a una API backend en `https://localhost:44311/api/v1`. Asegúrate de que el servidor backend esté ejecutándose antes de iniciar la aplicación.
-
 ##  Licencia
 
 MIT License
 Copyright (c) 2025 Jhon Ospina
 Permission is hereby granted, free of charge, to any person obtaining a copy...
 
-##  Contacto
-
-Jhon Ospina - [GitHub](https://github.com/jospina-dev-blossom)
