@@ -26,8 +26,8 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="hero-title">
-            Impulsa tus <span className="hero-purple">ventas</span> con<br />
-            <span className="hero-orange">atención inteligente</span> 24/7
+            Impulsa tus <span className="gradient-text-ventas">ventas</span> con<br />
+            <span className="gradient-text-atencion">atención inteligente</span> 24/7
           </h1>
 
           <p className="hero-description">

@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   padding: 0;
-  background: linear-gradient(135deg, #fef3f9 0%, #e5dff5 50%, #d4e5f9 100%);
+  background: linear-gradient(135deg, #f8f4fc 0%, #f3e8f9 50%, #e8f4fa 100%);
   min-height: 100vh;
 }
 
@@ -24,7 +24,7 @@
 
 .btn-login-hero {
   padding: 0.75rem 2rem;
-  background: #7c3aed;
+  background: #652D92;
   color: white;
   border: none;
   border-radius: 8px;
@@ -35,9 +35,9 @@
 }
 
 .btn-login-hero:hover {
-  background: #6d28d9;
+  background: #4a2170;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 4px 12px rgba(101, 45, 146, 0.4);
 }
 
 .hero-container {
@@ -63,12 +63,42 @@
   color: #1f2937;
 }
 
-.hero-purple {
-  color: #7c3aed;
+.gradient-text-ventas {
+  background: linear-gradient(90deg, 
+    #652D92 0%,
+    #652D92 16.67%,
+    #B570AE 33.33%,
+    #B570AE 50%,
+    #652D92 66.67%,
+    #652D92 83.33%,
+    #652D92 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.hero-orange {
-  color: #f59e0b;
+.gradient-text-atencion {
+  background: linear-gradient(90deg, 
+    #FAB917 0%,
+    #E7967B 7%,
+    #E7967B 14%,
+    #B570AE 21%,
+    #652D92 28%,
+    #652D92 35%,
+    #B570AE 42%,
+    #2BB2E9 49%,
+    #2BB2E9 56%,
+    #652D92 63%,
+    #652D92 70%,
+    #B570AE 77%,
+    #2BB2E9 84%,
+    #2BB2E9 91%,
+    #2BB2E9 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-description {
@@ -81,7 +111,7 @@
 
 .btn-cta {
   padding: 1rem 2.5rem;
-  background: #7c3aed;
+  background: #652D92;
   color: white;
   border: none;
   border-radius: 8px;
@@ -92,9 +122,9 @@
 }
 
 .btn-cta:hover {
-  background: #6d28d9;
+  background: #4a2170;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 6px 20px rgba(101, 45, 146, 0.4);
 }
 
 .hero-phone {

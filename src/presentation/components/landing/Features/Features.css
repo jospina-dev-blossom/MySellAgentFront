@@ -32,7 +32,7 @@
   right: 0;
   bottom: -8px;
   height: 4px;
-  background: linear-gradient(90deg, #f59e0b, #ec4899, #8b5cf6);
+  background: linear-gradient(90deg, #2BB2E9 0%, #B570AE 50%, #FAB917 100%);
   border-radius: 2px;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #f3e8ff 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #f3e8f9 0%, #e8f4fa 100%);
   padding: 2.5rem 2rem;
   border-radius: 16px;
   transition: all 0.3s ease;
@@ -53,11 +53,11 @@
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 12px 30px rgba(91, 58, 143, 0.2);
 }
 
 .feature-card:nth-child(4) {
-  background: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #f8eef3 0%, #fef7ec 100%);
 }
 
 .feature-icon {

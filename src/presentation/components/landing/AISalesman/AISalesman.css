@@ -38,15 +38,21 @@
 }
 
 .ai-text {
-  color: #3b82f6;
+  color: #2BB2E9;
 }
 
-.me-text {
-  color: #f59e0b;
-}
-
-.jor-text {
-  color: #7c3aed;
+.gradient-text-mejor {
+  background: linear-gradient(90deg, 
+    #FAB917 0%,
+    #E7967B 20%,
+    #652D92 40%,
+    #B570AE 60%,
+    #2BB2E9 80%,
+    #2BB2E9 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .ai-salesman-description {

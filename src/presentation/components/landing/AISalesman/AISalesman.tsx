@@ -25,7 +25,7 @@ export const AISalesman = () => {
         >
           <h2 className="ai-salesman-title">
             Recreamos con <span className="ai-text">AI</span> al<br />
-            <span className="me-text">me</span><span className="jor-text">jor vendedor</span>
+            <span className="gradient-text-mejor">mejor vendedor</span>
           </h2>
           <p className="ai-salesman-description">
             La forma inteligente y segura de vender optimizando tus 
