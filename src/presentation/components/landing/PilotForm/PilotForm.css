@@ -1,0 +1,108 @@
+.pilot-form {
+  padding: 6rem 4rem;
+  background: linear-gradient(180deg, #fef8e7 0%, #fef3e2 100%);
+}
+
+.pilot-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pilot-form-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pilot-form-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.pilot-form-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.pilot-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group select,
+.form-group input {
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.pilot-form-button {
+  margin-top: 1rem;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.pilot-form-button:hover {
+  box-shadow: 0 6px 25px rgba(245, 158, 11, 0.5);
+}
+
+@media (max-width: 768px) {
+  .pilot-form {
+    padding: 4rem 2rem;
+  }
+
+  .pilot-form-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .pilot-form-title {
+    font-size: 2rem;
+  }
+
+  .pilot-form-description {
+    font-size: 1rem;
+  }
+}

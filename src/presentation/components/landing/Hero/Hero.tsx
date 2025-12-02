@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, LogIn } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import piaLogo from '@shared/utils/images/Pia.png';
+import cellphoneImage from '@shared/utils/images/cellphone.png';
 import './Hero.css';
 
 interface HeroProps {
@@ -11,83 +12,49 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
   return (
     <section className="hero">
       <div className="hero-nav">
+        <img src={piaLogo} alt="Pia Logo" className="hero-logo" />
         <Link to="/login" className="btn-login-hero">
-          <LogIn size={18} />
-          Iniciar Sesión
+          Únete al piloto
         </Link>
       </div>
 
-      <motion.div
-        className="hero-content"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+      <div className="hero-container">
         <motion.div
-          className="hero-badge"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
+          className="hero-content"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          <Sparkles size={16} />
-          <span>Personaliza tu Agente de IA</span>
-        </motion.div>
+          <h1 className="hero-title">
+            Impulsa tus <span className="hero-purple">ventas</span> con<br />
+            <span className="hero-orange">atención inteligente</span> 24/7
+          </h1>
 
-        <h1 className="hero-title">
-          Crea tu Agente de IA
-          <span className="hero-gradient"> Personalizado</span>
-        </h1>
+          <p className="hero-description">
+            Pia es una IA diseñada para responder consultas al instante, 
+            manejar pedidos y adaptarse a la forma en que tu negocio se 
+            comunica. Una solución flexible, confiable y disponible las 24/7.
+          </p>
 
-        <p className="hero-description">
-          Diseña, configura y despliega agentes de inteligencia artificial adaptados
-          a tus necesidades específicas. Sin código, en minutos.
-        </p>
-
-        <div className="hero-actions">
           <motion.button
-            className="btn btn-primary"
+            className="btn-cta"
             onClick={onGetStarted}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Comenzar Ahora
-            <ArrowRight size={20} />
+            Conoce la plataforma
           </motion.button>
+        </motion.div>
 
-          <motion.button
-            className="btn btn-secondary"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Ver Demo
-          </motion.button>
-        </div>
-
-        <div className="hero-stats">
-          <div className="stat">
-            <div className="stat-value">10K+</div>
-            <div className="stat-label">Agentes Creados</div>
-          </div>
-          <div className="stat">
-            <div className="stat-value">98%</div>
-            <div className="stat-label">Satisfacción</div>
-          </div>
-          <div className="stat">
-            <div className="stat-value">24/7</div>
-            <div className="stat-label">Disponibilidad</div>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="hero-visual"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <div className="visual-glow"></div>
-        <div className="visual-grid"></div>
-      </motion.div>
+        <motion.div
+          className="hero-phone"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <img src={cellphoneImage} alt="Chat en celular" className="phone-image" />
+        </motion.div>
+      </div>
     </section>
   );
 };

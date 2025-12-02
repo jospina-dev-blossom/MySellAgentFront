@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { Hero } from '@presentation/components/landing/Hero';
 import { Features } from '@presentation/components/landing/Features';
-import { CTA } from '@presentation/components/landing/CTA';
-import { Footer } from '@presentation/components/common/Footer';
+import { AISalesman } from '@presentation/components/landing/AISalesman';
+import { Stats } from '@presentation/components/landing/Stats';
+import { PilotForm } from '@presentation/components/landing/PilotForm';
 import './LandingPage.css';
 
 export const LandingPage = () => {
@@ -16,8 +17,9 @@ export const LandingPage = () => {
     <div className="landing-page">
       <Hero onGetStarted={handleGetStarted} />
       <Features />
-      <CTA />
-      <Footer />
+      <AISalesman />
+      <Stats />
+      <PilotForm />
     </div>
   );
 };

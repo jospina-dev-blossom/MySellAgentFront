@@ -1,0 +1,76 @@
+.ai-salesman {
+  padding: 6rem 4rem;
+  background: white;
+}
+
+.ai-salesman-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ai-salesman-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-salesman-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.ai-salesman-content {
+  padding-left: 2rem;
+}
+
+.ai-salesman-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.ai-text {
+  color: #3b82f6;
+}
+
+.me-text {
+  color: #f59e0b;
+}
+
+.jor-text {
+  color: #7c3aed;
+}
+
+.ai-salesman-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+@media (max-width: 968px) {
+  .ai-salesman {
+    padding: 4rem 2rem;
+  }
+
+  .ai-salesman-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .ai-salesman-content {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .ai-salesman-title {
+    font-size: 2rem;
+  }
+}
