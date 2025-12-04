@@ -1,11 +1,14 @@
 .stats {
   padding: 6rem 4rem;
-  background: linear-gradient(135deg, #f8f4fc 0%, #e8f4fa 100%);
+  background: 
+    radial-gradient(circle at left bottom, rgba(43, 178, 233, 0.4) 10%, transparent 35%),
+    radial-gradient(circle at center bottom , rgba(250, 185, 23, 0.4) 10%, transparent 30%),
+    #ffffff;
 }
 
 .stats-container {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto; 
   display: grid;
   grid-template-columns: 0.6fr 1.4fr;
   gap: 0;

@@ -1,7 +1,11 @@
 .hero {
   position: relative;
   padding: 0;
-  background: linear-gradient(135deg, #f8f4fc 0%, #f3e8f9 50%, #e8f4fa 100%);
+  background: 
+    radial-gradient(circle at top center, rgba(181, 112, 174, 0.4) 5%, transparent 50%),
+    radial-gradient(circle at top right, rgba(43, 178, 233, 0.4) 5%, transparent 20%),
+    radial-gradient(circle at center right, rgba(250, 185, 23, 0.4) 1%, transparent 15%),
+    #ffffff;
   min-height: 100vh;
 }
 
@@ -18,7 +22,7 @@
 }
 
 .hero-logo {
-  height: 50px;
+  height: 90px;
   width: auto;
 }
 
@@ -56,11 +60,17 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 2rem;
   color: #1f2937;
+}
+
+.hero-title .flex {
+  display: flex;
+  text-wrap: nowrap;
+  gap: 1rem;
 }
 
 .gradient-text-ventas {
@@ -102,7 +112,7 @@
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   color: #4b5563;
   margin-bottom: 2.5rem;
@@ -146,7 +156,7 @@
   }
 
   .hero-logo {
-    height: 40px;
+    height: 60px;
   }
 
   .hero-container {

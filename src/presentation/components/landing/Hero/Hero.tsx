@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import piaLogo from '@shared/utils/images/Pia.png';
-import cellphoneImage from '@shared/utils/images/cellphone.png';
-import './Hero.css';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import piaLogo from "@shared/utils/images/Pia.png";
+import cellphoneImage from "@shared/utils/images/cellphone1.png";
+import "./Hero.css";
 
 interface HeroProps {
   onGetStarted: () => void;
@@ -25,15 +25,23 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="hero-title">
-            Impulsa tus <span className="gradient-text-ventas">ventas</span> con<br />
-            <span className="gradient-text-atencion">atención inteligente</span> 24/7
-          </h1>
+          <div className="hero-title">
+            <div className="flex">
+              Impulsa tus <span className="gradient-text-ventas">ventas</span>{" "}
+              con
+            </div>
+            <div className="flex">
+              <span className="gradient-text-atencion">
+                atención inteligente
+              </span>{" "}
+              24/7
+            </div>
+          </div>
 
           <p className="hero-description">
-            Pia es una IA diseñada para responder consultas al instante, 
-            manejar pedidos y adaptarse a la forma en que tu negocio se 
-            comunica. Una solución flexible, confiable y disponible las 24/7.
+            Pia es una IA diseñada para responder consultas al instante, manejar
+            pedidos y adaptarse a la forma en que tu negocio se comunica. Una
+            solución flexible, confiable y disponible las 24/7.
           </p>
 
           <motion.button
@@ -52,7 +60,11 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img src={cellphoneImage} alt="Chat en celular" className="phone-image" />
+          <img
+            src={cellphoneImage}
+            alt="Chat en celular"
+            className="phone-image"
+          />
         </motion.div>
       </div>
     </section>

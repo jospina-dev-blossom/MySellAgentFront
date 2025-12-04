@@ -1,6 +1,11 @@
 .pilot-form {
   padding: 6rem 4rem;
-  background: linear-gradient(180deg, #fef9f0 0%, #fef5e7 100%);
+  background: 
+    radial-gradient(circle at left top, rgba(43, 178, 233, 0.4) 10%, transparent 40%),
+    radial-gradient(circle at center top , rgba(250, 185, 23, 0.4) 10%, transparent 35%),
+    radial-gradient(circle at left bottom, rgba(181, 112, 174, 0.4) 20%, transparent 50%), 
+
+    #ffffff;
 }
 
 .pilot-form-container {
@@ -9,7 +14,7 @@
 }
 
 .pilot-form-content {
-  background: white;
+  background: linear-gradient(135deg, #FEF8EC 0%, #FDF4E3 100%);
   border-radius: 20px;
   padding: 3rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -74,7 +79,7 @@
 .pilot-form-button {
   margin-top: 1rem;
   padding: 1.25rem 2rem;
-  background: linear-gradient(135deg, #FAB917 0%, #E7967B 50%, #B570AE 100%);
+  background: linear-gradient(90deg, #FAB917 0%, #E8A17E 50%, #C56B9B 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -87,6 +92,7 @@
 
 .pilot-form-button:hover {
   box-shadow: 0 6px 25px rgba(231, 150, 123, 0.5);
+  transform: scale(1.01);
 }
 
 @media (max-width: 768px) {
