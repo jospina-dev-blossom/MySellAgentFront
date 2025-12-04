@@ -1,12 +1,26 @@
-import { motion } from 'framer-motion';
-import cellphoneImage from '@shared/utils/images/cellphone.png';
-import './Stats.css';
+import { motion } from "framer-motion";
+import cellphoneImage from "@shared/utils/images/cellphone.png";
+import "./Stats.css";
 
 const stats = [
-  { label: 'Atención inmediata', gradient: 'linear-gradient(90deg, #B570AE 0%, #E7967B 100%)' },
-  { label: 'Conversaciones que venden', gradient: 'linear-gradient(90deg, #B570AE 0%, #2BB2E9 100%)' },
-  { label: 'Organización y seguimiento', gradient: 'linear-gradient(90deg, #652D92 0%, #652D92 100%)', color: '#652D92' },
-  { label: 'Ahorro de tiempo y recursos', gradient: 'linear-gradient(90deg, #E7967B 0%, #E7967B 100%)', color: '#E7967B' },
+  {
+    label: "Atención inmediata",
+    gradient: "linear-gradient(90deg, #B570AE 0%, #E7967B 100%)",
+  },
+  {
+    label: "Conversaciones que venden",
+    gradient: "linear-gradient(90deg, #B570AE 0%, #2BB2E9 100%)",
+  },
+  {
+    label: "Organización y seguimiento",
+    gradient: "linear-gradient(90deg, #652D92 0%, #652D92 100%)",
+    color: "#652D92",
+  },
+  {
+    label: "Ahorro de tiempo y recursos",
+    gradient: "linear-gradient(90deg, #E7967B 0%, #E7967B 100%)",
+    color: "#E7967B",
+  },
 ];
 
 export const Stats = () => {
@@ -22,10 +36,11 @@ export const Stats = () => {
         >
           <div className="stats-header">
             <div className="stats-badge">
-              +DE <span className="stats-number">27</span>
+              <span className="stats-number">+DE 27</span>
             </div>
             <p className="stats-subtitle">
-              Comercios Registrados<br />
+              Comercios Registrados
+              <br />
               con nuestros servicios
             </p>
           </div>
