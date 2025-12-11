@@ -6,8 +6,8 @@ import type { AuthCredentials } from '@core/domain/entities';
 export const useLogin = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signIn, signUp, loading, error } = useAuth();
-  const [isSignUp, setIsSignUp] = useState(false);
+  const { signIn, loading, error } = useAuth();
+  // const [isSignUp, setIsSignUp] = useState(false);
   const [formData, setFormData] = useState<AuthCredentials>({
     email: '',
     password: '',
@@ -20,11 +20,11 @@ export const useLogin = () => {
     e.preventDefault();
 
     try {
-      if (isSignUp) {
-        await signUp(formData);
-      } else {
+      // if (isSignUp) {
+      //   await signUp(formData);
+      // } else {
         await signIn(formData);
-      }
+      // }
       // Redirect to the page they were trying to access, or /customize
       navigate(from, { replace: true });
     } catch (err) {
@@ -40,17 +40,17 @@ export const useLogin = () => {
     });
   };
 
-  const toggleMode = () => {
-    setIsSignUp(!isSignUp);
-  };
+  // const toggleMode = () => {
+  //   setIsSignUp(!isSignUp);
+  // };
 
   return {
     formData,
-    isSignUp,
+    // isSignUp,
     loading,
     error,
     handleSubmit,
     handleChange,
-    toggleMode,
+    // toggleMode,
   };
 };

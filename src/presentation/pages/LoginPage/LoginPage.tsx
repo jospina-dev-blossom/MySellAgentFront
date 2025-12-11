@@ -7,12 +7,12 @@ import './LoginPage.css';
 export const LoginPage = () => {
   const {
     formData,
-    isSignUp,
+    // isSignUp,
     loading,
     error,
     handleSubmit,
     handleChange,
-    toggleMode,
+    // toggleMode,
   } = useLogin();
 
   return (
@@ -31,12 +31,14 @@ export const LoginPage = () => {
         <div className="login-header">
           <div className="login-logo">AI</div>
           <h1 className="login-title">
-            {isSignUp ? 'Crear Cuenta' : 'Iniciar Sesión'}
+            {'Iniciar Sesión'}
+            {/* {isSignUp ? 'Crear Cuenta' : 'Iniciar Sesión'} */}
           </h1>
           <p className="login-subtitle">
-            {isSignUp
+            {'Accede a tu cuenta para continuar'}
+            {/* {isSignUp
               ? 'Regístrate para comenzar a personalizar tu agente'
-              : 'Accede a tu cuenta para continuar'}
+              : 'Accede a tu cuenta para continuar'} */}
           </p>
         </div>
 
@@ -81,13 +83,14 @@ export const LoginPage = () => {
             ) : (
               <>
                 <LogIn size={20} />
-                {isSignUp ? 'Crear Cuenta' : 'Iniciar Sesión'}
+                {'Iniciar Sesión'}
+                {/* {isSignUp ? 'Crear Cuenta' : 'Iniciar Sesión'} */}
               </>
             )}
           </button>
         </form>
 
-        <div className="login-footer">
+        {/* <div className="login-footer">
           {isSignUp ? (
             <>
               ¿Ya tienes una cuenta?
@@ -103,7 +106,7 @@ export const LoginPage = () => {
               </button>
             </>
           )}
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );
