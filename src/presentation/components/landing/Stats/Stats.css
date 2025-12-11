@@ -1,8 +1,6 @@
 .stats {
   padding: 6rem 4rem;
   background: 
-    radial-gradient(circle at left bottom, rgba(43, 178, 233, 0.4) 10%, transparent 35%),
-    radial-gradient(circle at center bottom , rgba(250, 185, 23, 0.4) 10%, transparent 30%),
     #ffffff;
 }
 
