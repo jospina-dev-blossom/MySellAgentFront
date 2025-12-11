@@ -26,6 +26,45 @@
   width: auto;
 }
 
+.hero-nav-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-pilot-hero,
+.btn-portal-hero {
+  padding: 0.75rem 2rem;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-pilot-hero {
+  background: linear-gradient(90deg, #FAB917 0%, #E8A17E 50%, #C56B9B 100%);
+}
+
+.btn-pilot-hero:hover {
+  background: linear-gradient(90deg, #E8A806 0%, #D7906D 50%, #B45A8A 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(250, 185, 23, 0.4);
+}
+
+.btn-portal-hero {
+  background: linear-gradient(135deg, #652D92 0%, #8B4FC1 100%);
+}
+
+.btn-portal-hero:hover {
+  background: linear-gradient(135deg, #4a2170 0%, #652D92 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(101, 45, 146, 0.4);
+}
+
 .btn-login-hero {
   padding: 0.75rem 2rem;
   background: #652D92;
@@ -36,6 +75,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 0.95rem;
+  cursor: pointer;
 }
 
 .btn-login-hero:hover {
@@ -121,7 +161,7 @@
 
 .btn-cta {
   padding: 1rem 2.5rem;
-  background: #652D92;
+  background: linear-gradient(90deg, #FAB917 0%, #E8A17E 50%, #C56B9B 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -132,9 +172,9 @@
 }
 
 .btn-cta:hover {
-  background: #4a2170;
+  background: linear-gradient(90deg, #E8A806 0%, #D7906D 50%, #B45A8A 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(101, 45, 146, 0.4);
+  box-shadow: 0 6px 20px rgba(250, 185, 23, 0.4);
 }
 
 .hero-phone {

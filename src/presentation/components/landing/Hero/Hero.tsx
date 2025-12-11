@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import piaLogo from "@shared/utils/images/Pia.png";
 import cellphoneImage from "@shared/utils/images/cellphone1.png";
 import "./Hero.css";
@@ -9,13 +8,25 @@ interface HeroProps {
 }
 
 export const Hero = ({ onGetStarted }: HeroProps) => {
+  const scrollToPilotForm = () => {
+    const pilotForm = document.querySelector('.pilot-form');
+    if (pilotForm) {
+      pilotForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="hero">
       <div className="hero-nav">
         <img src={piaLogo} alt="Pia Logo" className="hero-logo" />
-        <Link to="/login" className="btn-login-hero">
-          Únete al piloto
-        </Link>
+        <div className="hero-nav-buttons">
+          <button onClick={scrollToPilotForm} className="btn-pilot-hero">
+            Únete al piloto
+          </button>
+          <button onClick={onGetStarted} className="btn-portal-hero">
+            Portal Clientes
+          </button>
+        </div>
       </div>
 
       <div className="hero-container">
@@ -46,11 +57,11 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
 
           <motion.button
             className="btn-cta"
-            onClick={onGetStarted}
+            onClick={scrollToPilotForm}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Conoce la plataforma
+            Únete al piloto
           </motion.button>
         </motion.div>
 

@@ -8,12 +8,14 @@ import {
   where,
   serverTimestamp,
   Timestamp,
+  addDoc,
 } from 'firebase/firestore';
 import { db } from '@infrastructure/config/firebase.config';
-import type { AgentConfiguration } from '@core/domain/entities';
+import type { AgentConfiguration, PilotLead } from '@core/domain/entities';
 
-// Collection name
+// Collection names
 const AGENTS_COLLECTION = 'agents';
+const PILOT_LEADS_COLLECTION = 'pilot_leads';
 
 // Firestore document type (includes metadata)
 interface AgentDocument {
@@ -139,6 +141,57 @@ export const firestoreService = {
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : 'Failed to get user agents';
+      throw new Error(errorMessage);
+    }
+  },
+
+  /**
+   * Save a pilot lead to Firestore
+   */
+  savePilotLead: async (lead: Omit<PilotLead, 'id' | 'createdAt' | 'status'>): Promise<string> => {
+    try {
+      const leadsRef = collection(db, PILOT_LEADS_COLLECTION);
+      const leadData = {
+        contactMethod: lead.contactMethod,
+        contactInfo: lead.contactInfo,
+        sector: lead.sector || null,
+        businessName: lead.businessName || null,
+        status: 'pending',
+        createdAt: serverTimestamp(),
+      };
+
+      const docRef = await addDoc(leadsRef, leadData);
+      return docRef.id;
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : 'Failed to save pilot lead';
+      throw new Error(errorMessage);
+    }
+  },
+
+  /**
+   * Get all pilot leads (admin function)
+   */
+  getAllPilotLeads: async (): Promise<PilotLead[]> => {
+    try {
+      const leadsRef = collection(db, PILOT_LEADS_COLLECTION);
+      const querySnapshot = await getDocs(leadsRef);
+
+      return querySnapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          contactMethod: data.contactMethod,
+          contactInfo: data.contactInfo,
+          sector: data.sector,
+          businessName: data.businessName,
+          status: data.status,
+          createdAt: data.createdAt?.toDate(),
+        } as PilotLead;
+      });
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : 'Failed to get pilot leads';
       throw new Error(errorMessage);
     }
   },

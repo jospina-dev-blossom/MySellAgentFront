@@ -24,3 +24,7 @@ export type {
   AuthCredentials,
   AuthState,
 } from './User';
+
+export type {
+  PilotLead,
+} from './PilotLead';

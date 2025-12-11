@@ -1,18 +1,87 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { firestoreService } from '@infrastructure/api/firestoreApi';
+import type { PilotLead } from '@core/domain/entities';
 import './PilotForm.css';
 
 export const PilotForm = () => {
   const [formData, setFormData] = useState({
-    contactMethod: '',
+    contactMethod: '' as PilotLead['contactMethod'] | '',
+    contactInfo: '',
     sector: '',
     businessName: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí se manejaría el envío del formulario
-    console.log('Form submitted:', formData);
+    
+    if (!formData.contactMethod || !formData.contactInfo) {
+      setErrorMessage('Por favor completa los campos obligatorios');
+      setSubmitStatus('error');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    try {
+      await firestoreService.savePilotLead({
+        contactMethod: formData.contactMethod as PilotLead['contactMethod'],
+        contactInfo: formData.contactInfo,
+        sector: formData.sector || undefined,
+        businessName: formData.businessName || undefined,
+      });
+
+      setSubmitStatus('success');
+      // Reset form
+      setFormData({
+        contactMethod: '',
+        contactInfo: '',
+        sector: '',
+        businessName: '',
+      });
+
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle');
+      }, 5000);
+    } catch (error) {
+      console.error('Error submitting pilot lead:', error);
+      setErrorMessage('Hubo un error al enviar el formulario. Por favor intenta de nuevo.');
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const getContactPlaceholder = () => {
+    switch (formData.contactMethod) {
+      case 'email':
+        return 'ejemplo@correo.com';
+      case 'phone':
+        return '+57 300 123 4567';
+      case 'whatsapp':
+        return '+57 300 123 4567';
+      default:
+        return 'Selecciona un método primero';
+    }
+  };
+
+  const getContactLabel = () => {
+    switch (formData.contactMethod) {
+      case 'email':
+        return 'Correo Electrónico';
+      case 'phone':
+        return 'Número de Teléfono';
+      case 'whatsapp':
+        return 'Número de WhatsApp';
+      default:
+        return 'Información de Contacto';
+    }
   };
 
   return (
@@ -33,12 +102,12 @@ export const PilotForm = () => {
 
           <form className="pilot-form-fields" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="contactMethod">¿Cómo prefieres que te contactemos?</label>
+              <label htmlFor="contactMethod">¿Cómo prefieres que te contactemos? *</label>
               <select
                 id="contactMethod"
                 value={formData.contactMethod}
                 onChange={(e) =>
-                  setFormData({ ...formData, contactMethod: e.target.value })
+                  setFormData({ ...formData, contactMethod: e.target.value as PilotLead['contactMethod'] | '', contactInfo: '' })
                 }
                 required
               >
@@ -48,6 +117,22 @@ export const PilotForm = () => {
                 <option value="whatsapp">WhatsApp</option>
               </select>
             </div>
+
+            {formData.contactMethod && (
+              <div className="form-group">
+                <label htmlFor="contactInfo">{getContactLabel()} *</label>
+                <input
+                  type={formData.contactMethod === 'email' ? 'email' : 'tel'}
+                  id="contactInfo"
+                  placeholder={getContactPlaceholder()}
+                  value={formData.contactInfo}
+                  onChange={(e) =>
+                    setFormData({ ...formData, contactInfo: e.target.value })
+                  }
+                  required
+                />
+              </div>
+            )}
 
             <div className="form-group">
               <label htmlFor="sector">Sector donde planeas vender (Opcional)</label>
@@ -82,13 +167,26 @@ export const PilotForm = () => {
               />
             </div>
 
+            {submitStatus === 'success' && (
+              <div className="form-message form-success">
+                ¡Gracias por tu interés! Te contactaremos pronto.
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="form-message form-error">
+                {errorMessage}
+              </div>
+            )}
+
             <motion.button
               type="submit"
               className="pilot-form-button"
+              disabled={isSubmitting || !formData.contactMethod || !formData.contactInfo}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Solicitar Acceso
+              {isSubmitting ? 'Enviando...' : 'Solicitar Acceso'}
             </motion.button>
           </form>
         </motion.div>
