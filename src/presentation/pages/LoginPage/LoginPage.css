@@ -5,6 +5,7 @@
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 2rem;
+  position: relative;
 }
 
 .login-container {
@@ -171,6 +172,9 @@
 @media (max-width: 640px) {
   .login-page {
     padding: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2rem;
   }
 
   .login-header {
@@ -187,6 +191,7 @@
 
   .back-to-home {
     position: static;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    align-self: flex-start;
   }
 }
