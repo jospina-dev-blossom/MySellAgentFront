@@ -232,24 +232,68 @@
   }
 }
 
+@media (max-width: 480px) {
+  .hero-nav {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .hero-logo {
+    height: 55px;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-nav-buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-pilot-hero,
+  .btn-portal-hero,
+  .btn-login-hero {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .hero-container {
+    padding-top: 10rem;
+  }
+}
+
 @media (max-width: 425px) {
   .hero-nav {
     padding: 1rem;
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
   }
 
   .hero-logo {
     height: 50px;
+    margin-bottom: 0.5rem;
   }
 
+  .hero-nav-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-pilot-hero,
+  .btn-portal-hero,
   .btn-login-hero {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
 
   .hero-container {
-    padding: 5rem 1rem 2rem;
+    padding: 11rem 1rem 2rem;
     gap: 2rem;
   }
 
