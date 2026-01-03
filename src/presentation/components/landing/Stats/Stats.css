@@ -2,6 +2,7 @@
   padding: 6rem 4rem;
   background: 
     #ffffff;
+  overflow-x: hidden;
 }
 
 .stats-container {
@@ -115,6 +116,20 @@
   .stats-container {
     grid-template-columns: 1fr;
     gap: 3rem;
+    max-width: 100%;
+  }
+
+  .stats-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .stats-header {
+    text-wrap: wrap;
+    width: 100%;
   }
 
   .stats-badge {
@@ -125,10 +140,20 @@
     font-size: 3rem;
   }
 
+  .stats-list {
+    width: 100%;
+    align-items: stretch;
+  }
+
   .stat-item-wrapper {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  .stat-item {
+    width: 100%;
+    text-align: center;
   }
 
   .stat-connector {
@@ -137,9 +162,41 @@
 
   .stats-image {
     justify-content: center;
+    width: 100%;
+    overflow: hidden;
   }
 
   .stats-image img {
     max-width: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 425px) {
+  .stats {
+    padding: 3rem 1rem;
+  }
+
+  .stats-container {
+    padding: 0 1rem;
+  }
+
+  .stats-badge {
+    font-size: 1.5rem;
+  }
+
+  .stats-number {
+    font-size: 2.5rem;
+  }
+
+  .stats-subtitle {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .stat-item {
+    font-size: 0.8rem;
+    padding: 0.75rem 1.2rem;
   }
 }

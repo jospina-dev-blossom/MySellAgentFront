@@ -7,6 +7,7 @@
     radial-gradient(circle at center right, rgba(250, 185, 23, 0.4) 1%, transparent 15%),
     #ffffff;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .hero-nav {
@@ -203,13 +204,75 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 6rem 2rem 2rem;
+    max-width: 100%;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .hero-title .flex {
+    flex-wrap: wrap;
+    text-wrap: wrap;
   }
 
   .hero-description {
     font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .phone-image {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-nav {
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .hero-logo {
+    height: 50px;
+  }
+
+  .btn-login-hero {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-container {
+    padding: 5rem 1rem 2rem;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .hero-title .flex {
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .phone-image {
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
